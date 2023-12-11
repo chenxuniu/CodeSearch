@@ -1,0 +1,900 @@
+{
+  "dataset":[
+    {
+      "description":"Reverse a string in Python",
+      "code":"string[::-1]",
+      "tags":[
+        "python",
+        "string",
+        "reverse"
+      ]
+    },
+    {
+      "description":"Function to add two numbers in Python",
+      "code":"def add(a, b): return a + b",
+      "tags":[
+        "python",
+        "function",
+        "math",
+        "addition"
+      ]
+    },
+    {
+      "description":"Iterate over a list using a for loop",
+      "code":"for item in my_list: print(item)",
+      "tags":[
+        "python",
+        "list",
+        "loop",
+        "iteration"
+      ]
+    },
+    {
+      "description":"Check if a dictionary contains a specific key",
+      "code":"if 'key_name' in my_dict: print('Key exists')",
+      "tags":[
+        "python",
+        "dictionary",
+        "key"
+      ]
+    },
+    {
+      "description":"Create a list comprehension to generate a list of squares",
+      "code":"[x*x for x in range(10)]",
+      "tags":[
+        "python",
+        "list comprehension",
+        "math"
+      ]
+    },
+    {
+      "description":"Open and read a file in Python",
+      "code":"\nwith open('filename.txt', 'r') as file:\n    content = file.read()\nprint(content)\n        ",
+      "tags":[
+        "python",
+        "file",
+        "read",
+        "I/O"
+      ]
+    },
+    {
+      "description":"Define a lambda function to square a number",
+      "code":"square = lambda x: x*x",
+      "tags":[
+        "python",
+        "lambda",
+        "function",
+        "math"
+      ]
+    },
+    {
+      "description":"Catch exceptions using try-except blocks",
+      "code":"\ntry:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero!\")\n        ",
+      "tags":[
+        "python",
+        "exception",
+        "try-except",
+        "error handling"
+      ]
+    },
+    {
+      "description":"Use list's append method to add an item",
+      "code":"my_list.append('new_item')",
+      "tags":[
+        "python",
+        "list",
+        "append"
+      ]
+    },
+    {
+      "description":"Convert a list of strings into a single string",
+      "code":"joined_string = ' '.join(my_list_of_strings)",
+      "tags":[
+        "python",
+        "string",
+        "join",
+        "list"
+      ]
+    },
+    {
+      "description":"Get the current date and time using datetime",
+      "code":"\nfrom datetime import datetime\ncurrent_datetime = datetime.now()\n        ",
+      "tags":[
+        "python",
+        "datetime",
+        "current time"
+      ]
+    },
+    {
+      "description":"Sort a list of numbers in descending order",
+      "code":"sorted_list = sorted(my_list, reverse=True)",
+      "tags":[
+        "python",
+        "list",
+        "sort"
+      ]
+    },
+    {
+      "description":"Filter even numbers from a list using list comprehension",
+      "code":"even_numbers = [x for x in my_list if x % 2 == 0]",
+      "tags":[
+        "python",
+        "list comprehension",
+        "filter"
+      ]
+    },
+    {
+      "description":"Use the map function to apply a function to each item of a list",
+      "code":"squared_numbers = list(map(lambda x: x*x, numbers))",
+      "tags":[
+        "python",
+        "map",
+        "list",
+        "lambda"
+      ]
+    },
+    {
+      "description":"Define a class with an instance method",
+      "code":"\nclass MyClass:\n    def my_method(self):\n        print(\"This is my method!\")\n        ",
+      "tags":[
+        "python",
+        "class",
+        "OOP",
+        "method"
+      ]
+    },
+    {
+      "description":"Implementing a basic singly linked list with insertion and display methods",
+      "code":"\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def insert(self, data):\n        new_node = Node(data)\n        if not self.head:\n            self.head = new_node\n        else:\n            current = self.head\n            while current.next:\n                current = current.next\n            current.next = new_node\n\n    def display(self):\n        current = self.head\n        while current:\n            print(current.data, end=' -> ')\n            current = current.next\n        print('None')\n        ",
+      "tags":[
+        "python",
+        "linked list",
+        "data structure"
+      ]
+    },
+    {
+      "description":"Decorator to time the execution of a function",
+      "code":"\nimport time\n\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f'Function {func.__name__} executed in {end - start:.4f} seconds')\n        return result\n    return wrapper\n\n@timer\ndef example_function():\n    time.sleep(2)\n        ",
+      "tags":[
+        "python",
+        "decorator",
+        "timer",
+        "function"
+      ]
+    },
+    {
+      "description":"Implement a basic binary search algorithm",
+      "code":"\ndef binary_search(arr, x):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] < x:\n            low = mid + 1\n        elif arr[mid] > x:\n            high = mid - 1\n        else:\n            return mid\n    return -1\n        ",
+      "tags":[
+        "python",
+        "algorithm",
+        "search",
+        "binary search"
+      ]
+    },
+    {
+      "description":"Using context manager to handle file operations",
+      "code":"\nclass File:\n    def __init__(self, filename, mode):\n        self.filename = filename\n        self.mode = mode\n\n    def __enter__(self):\n        self.file = open(self.filename, self.mode)\n        return self.file\n\n    def __exit__(self, exc_type, exc_val, traceback):\n        self.file.close()\n\nwith File('sample.txt', 'r') as f:\n    content = f.read()\n        ",
+      "tags":[
+        "python",
+        "context manager",
+        "file",
+        "I/O",
+        "with statement"
+      ]
+    },
+    {
+      "description":"Factorial function using recursion",
+      "code":"\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\n        ",
+      "tags":[
+        "python",
+        "recursion",
+        "math",
+        "factorial"
+      ]
+    },
+    {
+      "description":"Calculate the eigenvalues and eigenvectors of a matrix",
+      "code":"\nimport numpy as np\n\nA = np.array([[1, 2], [3, 4]])\neigenvalues, eigenvectors = np.linalg.eig(A)\n        ",
+      "tags":[
+        "numpy",
+        "eigenvalues",
+        "eigenvectors",
+        "linalg"
+      ]
+    },
+    {
+      "description":"Perform Singular Value Decomposition (SVD)",
+      "code":"\nimport numpy as np\n\nA = np.array([[1, 2], [3, 4]])\nU, s, VT = np.linalg.svd(A)\n        ",
+      "tags":[
+        "numpy",
+        "svd",
+        "decomposition"
+      ]
+    },
+    {
+      "description":"Create a two-dimensional Gaussian function",
+      "code":"\nimport numpy as np\n\nx = np.linspace(-5, 5, 100)\ny = np.linspace(-5, 5, 100)\nx, y = np.meshgrid(x, y)\ngaussian = np.exp(-(x**2 + y**2))\n        ",
+      "tags":[
+        "numpy",
+        "gaussian",
+        "meshgrid"
+      ]
+    },
+    {
+      "description":"Solve a system of linear equations",
+      "code":"\nimport numpy as np\n\nA = np.array([[3,1], [1,2]])\nb = np.array([9,8])\nx = np.linalg.solve(A, b)\n        ",
+      "tags":[
+        "numpy",
+        "linear equations",
+        "linalg",
+        "solve"
+      ]
+    },
+    {
+      "description":"Perform a Fast Fourier Transform (FFT)",
+      "code":"\nimport numpy as np\n\nx = np.linspace(0, 100, 10000)\ny = np.sin(x)\n\nfft_result = np.fft.fft(y)\n        ",
+      "tags":[
+        "numpy",
+        "fft",
+        "fourier transform"
+      ]
+    },
+    {
+      "description":"Generate a random sample from a normal (Gaussian) distribution",
+      "code":"\nimport numpy as np\n\nmean = 0\nstd_dev = 1\nsize = 1000\n\nsample = np.random.normal(mean, std_dev, size)\n        ",
+      "tags":[
+        "numpy",
+        "random",
+        "normal distribution",
+        "statistics"
+      ]
+    },
+    {
+      "description":"Compute the convolution of two vectors",
+      "code":"\nimport numpy as np\n\nv1 = np.array([1, 2, 3])\nv2 = np.array([0, 1, 0.5])\n\nconv_result = np.convolve(v1, v2)\n        ",
+      "tags":[
+        "numpy",
+        "convolution",
+        "signal processing"
+      ]
+    },
+    {
+      "description":"Calculate the determinant of a matrix",
+      "code":"\nimport numpy as np\n\nA = np.array([[1, 2], [3, 4]])\ndet_A = np.linalg.det(A)\n        ",
+      "tags":[
+        "numpy",
+        "determinant",
+        "linalg"
+      ]
+    },
+    {
+      "description":"Perform an element-wise multiplication of two matrices (Hadamard product)",
+      "code":"\nimport numpy as np\n\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\nhadamard_product = A * B\n        ",
+      "tags":[
+        "numpy",
+        "matrices",
+        "element-wise",
+        "hadamard product"
+      ]
+    },
+    {
+      "description":"Interpolate a set of points using a cubic spline",
+      "code":"\nimport numpy as np\nfrom scipy.interpolate import CubicSpline\n\nx = np.array([0, 1, 2, 3, 4])\ny = np.array([1, 3, 2, 5, 4])\n\ncs = CubicSpline(x, y)\nx_new = np.linspace(0, 4, 100)\ny_new = cs(x_new)\n        ",
+      "tags":[
+        "numpy",
+        "interpolation",
+        "cubic spline"
+      ]
+    },
+    {
+      "description":"Reverse a string using a stack",
+      "code":"\ndef reverse_string(s):\n    stack = list(s)\n    reversed_string = ''\n    while stack:\n        reversed_string += stack.pop()\n    return reversed_string\n\nreversed_s = reverse_string('hello')\n        ",
+      "tags":[
+        "stack",
+        "string"
+      ]
+    },
+    {
+      "description":"Check for balanced parentheses using a stack",
+      "code":"\ndef is_balanced(expression):\n    matching_braces = {')': '(', ']': '[', '}': '{'}\n    stack = []\n    for char in expression:\n        if char in matching_braces.values():\n            stack.append(char)\n        elif char in matching_braces:\n            if not stack or matching_braces[char] != stack.pop():\n                return False\n    return not stack\n\nbalanced = is_balanced('(a+[b*c]-{d/e})')\n        ",
+      "tags":[
+        "stack",
+        "parentheses",
+        "balanced"
+      ]
+    },
+    {
+      "description":"Perform breadth-first search (BFS) on a graph",
+      "code":"\nfrom collections import deque\n\ndef bfs(graph, start):\n    visited = set()\n    queue = deque([start])\n    \n    while queue:\n        vertex = queue.popleft()\n        if vertex not in visited:\n            visited.add(vertex)\n            queue.extend(set(graph[vertex]) - visited)\n    return visited\n\ngraph = {1: [2, 3], 2: [4, 5], 3: [5], 4: [], 5: [6], 6: []}\nbfs_visited = bfs(graph, 1)\n        ",
+      "tags":[
+        "graph",
+        "bfs",
+        "deque"
+      ]
+    },
+    {
+      "description":"Implement a queue using two stacks",
+      "code":"\nclass Queue:\n    def __init__(self):\n        self.stack_in = []\n        self.stack_out = []\n\n    def enqueue(self, val):\n        self.stack_in.append(val)\n\n    def dequeue(self):\n        if not self.stack_out:\n            while self.stack_in:\n                self.stack_out.append(self.stack_in.pop())\n        return self.stack_out.pop() if self.stack_out else None\n\nqueue = Queue()\nqueue.enqueue(1)\nqueue.enqueue(2)\ndequeued_item = queue.dequeue()\n        ",
+      "tags":[
+        "queue",
+        "stack"
+      ]
+    },
+    {
+      "description":"Find the most common element in a list using a counter",
+      "code":"\nfrom collections import Counter\n\ndef most_common_element(lst):\n    return Counter(lst).most_common(1)[0][0]\n\nlst = [1, 3, 3, 3, 2, 2, 2, 2, 4, 4, 5]\nmost_common = most_common_element(lst)\n        ",
+      "tags":[
+        "list",
+        "counter"
+      ]
+    },
+    {
+      "description":"Implement a priority queue and insert elements with priorities",
+      "code":"\nfrom queue import PriorityQueue\n\npq = PriorityQueue()\npq.put((10, 'low priority'))\npq.put((1, 'high priority'))\npq.put((5, 'medium priority'))\n\nwhile not pq.empty():\n    print(pq.get())\n        ",
+      "tags":[
+        "priority queue"
+      ]
+    },
+    {
+      "description":"Merge multiple sorted lists into one sorted list",
+      "code":"\nfrom heapq import merge\n\ndef merge_sorted_lists(*lists):\n    return list(merge(*lists))\n\nmerged_list = merge_sorted_lists([1, 4, 5], [1, 3, 4], [2, 6])\n        ",
+      "tags":[
+        "list",
+        "heapq",
+        "merge"
+      ]
+    },
+    {
+      "description":"Use set operations to find the intersection of two arrays",
+      "code":"\ndef intersection(arr1, arr2):\n    return list(set(arr1) & set(arr2))\n\narr1 = [4, 9, 5]\narr2 = [9, 4, 9, 8, 4]\nintersected = intersection(arr1, arr2)\n        ",
+      "tags":[
+        "set",
+        "intersection"
+      ]
+    },
+    {
+      "description":"Create a doubly linked list and implement insertion",
+      "code":"\nclass Node:\n    def __init__(self, value):\n        self.value = value\n        self.prev = None\n        self.next = None\n\nclass DoublyLinkedList:\n    def __init__(self):\n        self.head = None\n\n    def insert(self, value):\n        new_node = Node(value)\n        new_node.next = self.head\n        if self.head is not None:\n            self.head.prev = new_node\n        self.head = new_node\n\ndll = DoublyLinkedList()\ndll.insert(2)\ndll.insert(1)\n        ",
+      "tags":[
+        "doubly linked list",
+        "insert"
+      ]
+    },
+    {
+      "description":"Calculate the prime factors of a number",
+      "code":"\ndef prime_factors(n):\n    factors = []\n    # Number of 2s that divide n\n    while n % 2 == 0:\n        factors.append(2)\n        n //= 2\n    # n must be odd at this point\n    for i in range(3, int(sqrt(n)) + 1, 2):\n        while n % i == 0:\n            factors.append(i)\n            n //= i\n    # Condition if n is a prime number greater than 2\n    if n > 2:\n        factors.append(n)\n    return factors\n\nfactors_of_315 = prime_factors(315)\n        ",
+      "tags":[
+        "math",
+        "prime factors"
+      ]
+    },
+    {
+      "description":"Calculate the greatest common divisor (GCD) of two numbers",
+      "code":"\nfrom math import gcd\n\ndef calculate_gcd(x, y):\n    return gcd(x, y)\n\ngcd_of_8_and_12 = calculate_gcd(8, 12)\n        ",
+      "tags":[
+        "math",
+        "gcd"
+      ]
+    },
+    {
+      "description":"Find all combinations of a given size from a list",
+      "code":"\nfrom itertools import combinations\n\ndef find_combinations(arr, r):\n    return list(combinations(arr, r))\n\ncombinations_of_2_from_12345 = find_combinations([1, 2, 3, 4, 5], 2)\n        ",
+      "tags":[
+        "math",
+        "combinations"
+      ]
+    },
+    {
+      "description":"Calculate the least common multiple (LCM) of two numbers",
+      "code":"\ndef lcm(x, y):\n    return x * y // gcd(x, y)\n\nlcm_of_4_and_5 = lcm(4, 5)\n        ",
+      "tags":[
+        "math",
+        "lcm"
+      ]
+    },
+    {
+      "description":"Check if a number is a palindrome",
+      "code":"\ndef is_palindrome(num):\n    return str(num) == str(num)[::-1]\n\nis_number_palindrome = is_palindrome(12321)\n        ",
+      "tags":[
+        "math",
+        "palindrome"
+      ]
+    },
+    {
+      "description":"Solve a linear equation ax + b = 0",
+      "code":"\nfrom sympy import symbols, Eq, solve\n\ndef solve_linear_equation(a, b):\n    x = symbols('x')\n    equation = Eq(a*x + b, 0)\n    return solve(equation, x)\n\nsolution_to_equation = solve_linear_equation(2, -3)\n        ",
+      "tags":[
+        "math",
+        "equation",
+        "sympy"
+      ]
+    },
+    {
+      "description":"Calculate the Fibonacci sequence up to n elements",
+      "code":"\ndef fibonacci(n):\n    fib_sequence = [0, 1]\n    for i in range(2, n):\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n    return fib_sequence[:n]\n\nfirst_7_fibonacci_numbers = fibonacci(7)\n        ",
+      "tags":[
+        "math",
+        "fibonacci"
+      ]
+    },
+    {
+      "description":"Check if a number is prime",
+      "code":"\ndef is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(sqrt(n)) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nis_11_prime = is_prime(11)\n        ",
+      "tags":[
+        "math",
+        "prime"
+      ]
+    },
+    {
+      "description":"Calculate the area of a triangle given three sides (Heron's formula)",
+      "code":"\ndef herons_formula(a, b, c):\n    s = (a + b + c) / 2\n    area = sqrt(s * (s - a) * (s - b) * (s - c))\n    return area\n\narea_of_triangle = herons_formula(3, 4, 5)\n        ",
+      "tags":[
+        "math",
+        "triangle",
+        "area"
+      ]
+    },
+    {
+      "description":"Calculate the nth root of a number",
+      "code":"\ndef nth_root(num, root):\n    return num ** (1 / root)\n\ncubic_root_of_8 = nth_root(8, 3)\n        ",
+      "tags":[
+        "math",
+        "nth root"
+      ]
+    },
+    {
+      "description":"Traverse a binary tree using in-order traversal",
+      "code":"\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef in_order_traversal(root):\n    return in_order_traversal(root.left) + [root.val] + in_order_traversal(root.right) if root else []\n\n# Example Usage:\n# Construct a binary tree:     1\n#                            /   \\\n#                           2     3\n#                          / \\   /\n#                         4   5 6\nroot = TreeNode(1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3, TreeNode(6)))\nin_order = in_order_traversal(root)\n        ",
+      "tags":[
+        "tree",
+        "binary tree",
+        "in-order"
+      ]
+    },
+    {
+      "description":"Traverse a graph using depth-first search (DFS)",
+      "code":"\ndef dfs(graph, start, visited=None):\n    if visited is None:\n        visited = set()\n    visited.add(start)\n    for next_node in graph[start] - visited:\n        dfs(graph, next_node, visited)\n    return visited\n\n# Example Usage:\ngraph = {'A': set(['B', 'C']),\n         'B': set(['A', 'D', 'E']),\n         'C': set(['A', 'F']),\n         'D': set(['B']),\n         'E': set(['B', 'F']),\n         'F': set(['C', 'E'])}\ndfs_visited = dfs(graph, 'A')\n        ",
+      "tags":[
+        "graph",
+        "dfs"
+      ]
+    },
+    {
+      "description":"Perform a level-order traversal on a binary tree",
+      "code":"\ndef level_order_traversal(root):\n    levels = []\n    if not root:\n        return levels\n    queue = deque([root])\n    while queue:\n        level_size = len(queue)\n        level = []\n        for i in range(level_size):\n            node = queue.popleft()\n            level.append(node.val)\n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        levels.append(level)\n    return levels\n\n# Example Usage: Use the binary tree from the previous example\nlevel_order = level_order_traversal(root)\n        ",
+      "tags":[
+        "tree",
+        "binary tree",
+        "level-order"
+      ]
+    },
+    {
+      "description":"Traverse a matrix in spiral order",
+      "code":"\ndef spiral_order(matrix):\n    res = []\n    while matrix:\n        res += matrix.pop(0)\n        matrix = list(zip(*matrix))[::-1]  # Rotate the matrix\n    return res\n\n# Example Usage:\nmatrix = [\n [ 1, 2, 3 ],\n [ 4, 5, 6 ],\n [ 7, 8, 9 ]\n]\nspiral = spiral_order(matrix)\n        ",
+      "tags":[
+        "array",
+        "matrix",
+        "spiral"
+      ]
+    },
+    {
+      "description":"Implement Breadth-First Search (BFS) for a graph",
+      "code":"\ndef bfs(graph, start):\n    visited = []\n    queue = deque([start])\n    while queue:\n        vertex = queue.popleft()\n        if vertex not in visited:\n            visited.append(vertex)\n            queue.extend(graph[vertex] - set(visited))\n    return visited\n\n# Example Usage: Use the graph from the DFS example\nbfs_visited = bfs(graph, 'A')\n        ",
+      "tags":[
+        "graph",
+        "bfs"
+      ]
+    },
+    {
+      "description":"Pre-order traversal of a binary tree",
+      "code":"\ndef pre_order_traversal(root):\n    return [root.val] + pre_order_traversal(root.left) + pre_order_traversal(root.right) if root else []\n\n# Example Usage: Use the binary tree from the in-order traversal example\npre_order = pre_order_traversal(root)\n        ",
+      "tags":[
+        "tree",
+        "binary tree",
+        "pre-order"
+      ]
+    },
+    {
+      "description":"Post-order traversal of a binary tree",
+      "code":"\ndef post_order_traversal(root):\n    return post_order_traversal(root.left) + post_order_traversal(root.right) + [root.val] if root else []\n\n# Example Usage: Use the binary tree from the in-order traversal example\npost_order = post_order_traversal(root)\n        ",
+      "tags":[
+        "tree",
+        "binary tree",
+        "post-order"
+      ]
+    },
+    {
+      "description":"Find the shortest path in a grid avoiding obstacles",
+      "code":"\ndef shortest_path_grid(grid, start, end):\n    queue = deque([[start]])\n    visited = set([start])\n    while queue:\n        path = queue.popleft()\n        x, y = path[-1]\n        if (x, y) == end:\n            return path\n        for dx, dy in [(1,0), (-1,0), (0,1), (0,-1)]:  # Directions\n            nx, ny = x + dx, y + dy\n            if 0 <= nx < len(grid) and 0 <= ny < len(grid[0]) and grid[nx][ny] == 0 and (nx, ny) not in visited:\n                queue.append(path + [(nx, ny)])\n                visited.add((nx, ny))\n    return []\n\n# Example Usage:\ngrid = [[0, 0, 0], [1, 1, 0], [1, 1, 0]]\nstart = (0, 0)\nend = (2, 2)\nshortest_path = shortest_path_grid(grid, start, end)\n        ",
+      "tags":[
+        "grid",
+        "shortest path"
+      ]
+    },
+    {
+      "description":"Determine if a string has all unique characters.",
+      "code":"\ndef is_unique(s):\n    return len(set(s)) == len(s)\n\n# Example Usage:\nunique_string = \"abcdef\"\nnot_unique_string = \"aabbcc\"\nis_unique(unique_string)  # Returns True\nis_unique(not_unique_string)  # Returns False\n        ",
+      "tags":[
+        "string",
+        "unique characters"
+      ]
+    },
+    {
+      "description":"Check if two strings are permutations of each other.",
+      "code":"\nfrom collections import Counter\n\ndef are_permutations(str1, str2):\n    return Counter(str1) == Counter(str2)\n\n# Example Usage:\nstr1 = \"abcde\"\nstr2 = \"edcba\"\nstr3 = \"abcda\"\nare_permutations(str1, str2)  # Returns True\nare_permutations(str1, str3)  # Returns False\n        ",
+      "tags":[
+        "string",
+        "permutation"
+      ]
+    },
+    {
+      "description":"Find the 'Kth' max value in a binary search tree.",
+      "code":"\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef kth_largest(root, k):\n    # Perform reverse in-order traversal\n    def reverse_inorder(r):\n        if r is not None:\n            yield from reverse_inorder(r.right)\n            yield r.val\n            yield from reverse_inorder(r.left)\n            \n    gen = reverse_inorder(root)\n    for _ in range(k):\n        kth = next(gen)\n    return kth\n\n# Example Usage:\n# Construct a binary search tree:     5\n#                                    /   \\\n#                                   3     7\n#                                  / \\   / \\\n#                                 2   4  6   8\nroot = TreeNode(5, TreeNode(3, TreeNode(2), TreeNode(4)), TreeNode(7, TreeNode(6), TreeNode(8)))\nk = 3\nkth_largest_value = kth_largest(root, k)  # Returns 6\n        ",
+      "tags":[
+        "binary search tree",
+        "kth largest"
+      ]
+    },
+    {
+      "description":"Write a function to get the intersection point of two linked lists.",
+      "code":"\nclass ListNode:\n    def __init__(self, x):\n        self.val = x\n        self.next = None\n\ndef get_intersection_node(headA, headB):\n    nodes_in_B = set()\n    while headB is not None:\n        nodes_in_B.add(headB)\n        headB = headB.next\n    while headA is not None:\n        if headA in nodes_in_B:\n            return headA\n        headA = headA.next\n    return None\n\n# Example Usage:\n# Skip the list creation part for brevity. Assume we have two intersecting linked lists.\nintersection_node = get_intersection_node(list_headA, list_headB)\n        ",
+      "tags":[
+        "linked list",
+        "intersection"
+      ]
+    },
+    {
+      "description":"Binary Search: Search a sorted array by repeatedly dividing the search interval in half.",
+      "code":"def binary_search(arr, target):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n\n# Example Usage:\narr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\ntarget = 7\nindex = binary_search(arr, target)  # Returns the index of the target if found, otherwise -1",
+      "tags":[
+        "algorithm",
+        "binary search",
+        "search"
+      ]
+    },
+    {
+      "description":"Quick Sort: Sort an array using the divide and conquer approach.",
+      "code":"def quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick_sort(left) + middle + quick_sort(right)\n\n# Example Usage:\narr = [3, 6, 8, 10, 1, 2, 1]\nsorted_arr = quick_sort(arr)",
+      "tags":[
+        "algorithm",
+        "quick sort",
+        "sort"
+      ]
+    },
+    {
+      "description":"Merge Sort: Sort an array by dividing it into halves, sorting each half, and merging them.",
+      "code":"def merge_sort(arr):\n    if len(arr) > 1:\n        mid = len(arr) // 2\n        L = arr[:mid]\n        R = arr[mid:]\n\n        merge_sort(L)\n        merge_sort(R)\n\n        i = j = k = 0\n\n        while i < len(L) and j < len(R):\n            if L[i] < R[j]:\n                arr[k] = L[i]\n                i += 1\n            else:\n                arr[k] = R[j]\n                j += 1\n            k += 1\n\n        while i < len(L):\n            arr[k] = L[i]\n            i += 1\n            k += 1\n\n        while j < len(R):\n            arr[k] = R[j]\n            j += 1\n            k += 1\n    return arr\n\n# Example Usage:\narr = [12, 11, 13, 5, 6, 7]\nsorted_arr = merge_sort(arr)",
+      "tags":[
+        "algorithm",
+        "merge sort",
+        "sort"
+      ]
+    },
+    {
+      "description":"Depth-First Search (DFS) on a graph.",
+      "code":"def dfs(graph, start, visited=None):\n    if visited is None:\n        visited = set()\n    visited.add(start)\n    for next in graph[start]:\n        if next not in visited:\n            dfs(graph, next, visited)\n    return visited\n\n# Example Usage:\ngraph = {'A': set(['B', 'C']),\n         'B': set(['A', 'D', 'E']),\n         'C': set(['A', 'F']),\n         'D': set(['B']),\n         'E': set(['B', 'F']),\n         'F': set(['C', 'E'])}\ndfs_visited = dfs(graph, 'A')",
+      "tags":[
+        "algorithm",
+        "dfs",
+        "graph"
+      ]
+    },
+    {
+      "description":"Breadth-First Search (BFS) on a graph.",
+      "code":"from collections import deque\n\ndef bfs(graph, start):\n    visited, queue = set(), deque([start])\n    visited.add(start)\n    while queue:\n        vertex = queue.popleft()\n        for neighbour in graph[vertex]:\n            if neighbour not in visited:\n                visited.add(neighbour)\n                queue.append(neighbour)\n    return visited\n\n# Example Usage:\nbfs_visited = bfs(graph, 'A')",
+      "tags":[
+        "algorithm",
+        "bfs",
+        "graph"
+      ]
+    },
+    {
+      "description":"Dijkstra's Algorithm: Find the shortest paths from a start vertex to all other vertices in a weighted graph.",
+      "code":"import heapq\n\ndef dijkstra(graph, start):\n    distances = {vertex: float('infinity') for vertex in graph}\n    distances[start] = 0\n    pq = [(0, start)]\n    while len(pq) > 0:\n        current_distance, current_vertex = heapq.heappop(pq)\n        if current_distance > distances[current_vertex]:\n            continue\n        for neighbor, weight in graph[current_vertex].items():\n            distance = current_distance + weight\n            if distance < distances[neighbor]:\n                distances[neighbor] = distance\n                heapq.heappush(pq, (distance, neighbor))\n    return distances\n\n# Example Usage:\ngraph = {\n    'A': {'B': 1, 'C': 4},\n    'B': {'A': 1, 'C': 2, 'D': 5},\n    'C': {'A': 4, 'B': 2, 'D': 1},\n    'D': {'B': 5, 'C': 1}\n}\ndistances = dijkstra(graph, 'A')",
+      "tags":[
+        "algorithm",
+        "dijkstra",
+        "graph",
+        "shortest path"
+      ]
+    },
+    {
+      "description":"Bellman-Ford Algorithm: Compute shortest paths from a single source vertex to all other vertices in a weighted graph.",
+      "code":"def bellman_ford(graph, start):\n    distance = {vertex: float('infinity') for vertex in graph}\n    distance[start] = 0\n\n    for _ in range(len(graph) - 1):\n        for vertex in graph:\n            for neighbour, weight in graph[vertex].items():\n                if distance[vertex] + weight < distance[neighbour]:\n                    distance[neighbour] = distance[vertex] + weight\n\n    for vertex in graph:\n        for neighbour, weight in graph[vertex].items():\n            if distance[vertex] + weight < distance[neighbour]:\n                raise ValueError(\"Graph contains a negative weight cycle\")\n    return distance\n\n# Example Usage:\ngraph = {\n    'A': {'B': -1, 'C': 4},\n    'B': {'C': 3, 'D': 2, 'E': 2},\n    'C': {},\n    'D': {'B': 1, 'C': 5},\n    'E': {'D': -3}\n}\ndistances = bellman_ford(graph, 'A')",
+      "tags":[
+        "algorithm",
+        "bellman-ford",
+        "graph",
+        "shortest path"
+      ]
+    },
+    {
+      "description":"Floyd-Warshall Algorithm: Find the shortest paths between all pairs of vertices in a weighted graph.",
+      "code":"def floyd_warshall(vertices, edges):\n    distance = {v: dict.fromkeys(vertices, float('infinity')) for v in vertices}\n    for v in vertices:\n        distance[v][v] = 0\n    for u, v, w in edges:\n        distance[u][v] = w\n    for k in vertices:\n        for i in vertices:\n            for j in vertices:\n                distance[i][j] = min(distance[i][j], distance[i][k] + distance[k][j])\n    return distance",
+      "tags":[
+        "algorithm",
+        "floyd-warshall",
+        "graph",
+        "shortest path"
+      ]
+    },
+    {
+      "description":"Knapsack Problem: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.",
+      "code":"def knapsack(values, weights, capacity):\n    n = len(values)\n    dp = [[0 for x in range(capacity + 1)] for x in range(n + 1)]\n    for i in range(1, n + 1):\n        for w in range(1, capacity + 1):\n            if weights[i-1] <= w:\n                dp[i][w] = max(values[i-1] + dp[i-1][w-weights[i-1]], dp[i-1][w])\n            else:\n                dp[i][w] = dp[i-1][w]\n    return dp[n][capacity]",
+      "tags":[
+        "algorithm",
+        "knapsack",
+        "dynamic programming"
+      ]
+    },
+    {
+      "description":"Prim's Algorithm: Find the minimum spanning tree for a connected weighted undirected graph.",
+      "code":"import heapq\n\ndef prims(vertices, edges):\n    adj_list = {v: [] for v in vertices}\n    for u, v, w in edges:\n        adj_list[u].append((v, w))\n        adj_list[v].append((u, w))\n    mst = set()\n    used_vertices = set(vertices[:1])\n    candidate_edges = adj_list[vertices[0]][:]\n    heapq.heapify(candidate_edges)\n    while candidate_edges:\n        weight, vertex = heapq.heappop(candidate_edges)\n        if vertex not in used_vertices:\n            used_vertices.add(vertex)\n            mst.add((weight, vertex))\n            for next_vertex, next_weight in adj_list[vertex]:\n                if next_vertex not in used_vertices:\n                    heapq.heappush(candidate_edges, (next_weight, next_vertex))\n    return mst",
+      "tags":[
+        "algorithm",
+        "prims",
+        "graph",
+        "minimum spanning tree"
+      ]
+    },
+    {
+      "description":"Kruskal's Algorithm: Find the minimum spanning tree for a disconnected weighted undirected graph.",
+      "code":"def find(parent, i):\n    if parent[i] == i:\n        return i\n    return find(parent, parent[i])\n\ndef union(parent, rank, x, y):\n    xroot = find(parent, x)\n    yroot = find(parent, y)\n    if rank[xroot] < rank[yroot]:\n        parent[xroot] = yroot\n    elif rank[xroot] > rank[yroot]:\n        parent[yroot] = xroot\n    else:\n        parent[yroot] = xroot\n        rank[xroot] += 1\n\ndef kruskals(vertices, edges):\n    result = []\n    i = e = 0\n    parent = []\n    rank = []\n    edges = sorted(edges, key=lambda item: item[2])\n    for node in vertices:\n        parent.append(node)\n        rank.append(0)\n    while e < len(vertices) -1:\n        u, v, w = edges[i]\n        i = i + 1\n        x = find(parent, u)\n        y = find(parent, v)\n        if x != y:\n            e = e + 1\n            result.append((u, v, w))\n            union(parent, rank, x, y)\n    return result",
+      "tags":[
+        "algorithm",
+        "kruskals",
+        "graph",
+        "minimum spanning tree"
+      ]
+    },
+    {
+      "description":"Binary Search: Search a sorted array by repeatedly dividing the search interval in half.",
+      "code":"def binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        guess = arr[mid]\n        if guess == target:\n            return mid\n        if guess > target:\n            high = mid - 1\n        else:\n            low = mid + 1\n    return None",
+      "tags":[
+        "algorithm",
+        "binary search",
+        "search"
+      ]
+    },
+    {
+      "description":"Quick Sort: Sort an array by partitioning elements into smaller arrays, then recursively sorting the sub-arrays.",
+      "code":"def quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick_sort(left) + middle + quick_sort(right)",
+      "tags":[
+        "algorithm",
+        "quick sort",
+        "sort"
+      ]
+    },
+    {
+      "description":"Merge Sort: Sort an array by dividing it into halves, sorting the halves, and merging them back together.",
+      "code":"def merge_sort(arr):\n    if len(arr) > 1:\n        mid = len(arr) // 2\n        L = arr[:mid]\n        R = arr[mid:]\n        merge_sort(L)\n        merge_sort(R)\n        i = j = k = 0\n        while i < len(L) and j < len(R):\n            if L[i] < R[j]:\n                arr[k] = L[i]\n                i += 1\n            else:\n                arr[k] = R[j]\n                j += 1\n            k += 1\n        while i < len(L):\n            arr[k] = L[i]\n            i += 1\n            k += 1\n        while j < len(R):\n            arr[k] = R[j]\n            j += 1\n            k += 1",
+      "tags":[
+        "algorithm",
+        "merge sort",
+        "sort"
+      ]
+    },
+    {
+      "description":"Bubble Sort: Sort an array by repeatedly swapping adjacent elements if they are in the wrong order.",
+      "code":"def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]",
+      "tags":[
+        "algorithm",
+        "bubble sort",
+        "sort"
+      ]
+    },
+    {
+      "description":"Depth-First Search (DFS): Traverse a graph by exploring as far as possible along each branch before backtracking.",
+      "code":"def dfs(graph, start, visited=None):\n    if visited is None:\n        visited = set()\n    visited.add(start)\n    print(start)\n    for next in graph[start] - visited:\n        dfs(graph, next, visited)\n    return visited",
+      "tags":[
+        "algorithm",
+        "dfs",
+        "graph",
+        "traversal"
+      ]
+    },
+    {
+      "description":"Breadth-First Search (BFS): Traverse a graph level by level, exploring all of the neighbor nodes at the present depth before moving on to nodes at the next depth level.",
+      "code":"from collections import deque\n\ndef bfs(graph, start):\n    visited, queue = set(), deque([start])\n    while queue:\n        vertex = queue.popleft()\n        if vertex not in visited:\n            visited.add(vertex)\n            queue.extend(graph[vertex] - visited)\n    return visited",
+      "tags":[
+        "algorithm",
+        "bfs",
+        "graph",
+        "traversal"
+      ]
+    },
+    {
+      "description":"Heap Sort: Sort an array by building a max heap and then repeatedly extracting the maximum element.",
+      "code":"def heapify(arr, n, i):\n    largest = i\n    l = 2 * i + 1\n    r = 2 * i + 2\n    if l < n and arr[i] < arr[l]:\n        largest = l\n    if r < n and arr[largest] < arr[r]:\n        largest = r\n    if largest != i:\n        arr[i], arr[largest] = arr[largest], arr[i]\n        heapify(arr, n, largest)\n\ndef heap_sort(arr):\n    n = len(arr)\n    for i in range(n // 2 - 1, -1, -1):\n        heapify(arr, n, i)\n    for i in range(n-1, 0, -1):\n        arr[i], arr[0] = arr[0], arr[i]\n        heapify(arr, i, 0)",
+      "tags":[
+        "algorithm",
+        "heap sort",
+        "sort"
+      ]
+    },
+    {
+      "description":"Counting Sort: Sort an array by counting the number of occurrences of each unique value.",
+      "code":"def counting_sort(arr):\n    max_val = max(arr)\n    m = max_val + 1\n    count = [0] * m\n    for a in arr:\n        count[a] += 1\n    i = 0\n    for a in range(m):\n        for c in range(count[a]):\n            arr[i] = a\n            i += 1\n    return arr",
+      "tags":[
+        "algorithm",
+        "counting sort",
+        "sort"
+      ]
+    },
+    {
+      "description":"Reading a file line by line",
+      "code":"with open('file.txt', 'r') as file:\n    for line in file:\n        print(line.strip())",
+      "tags":[
+        "file I/O",
+        "read file",
+        "python"
+      ]
+    },
+    {
+      "description":"Writing to a file",
+      "code":"with open('output.txt', 'w') as file:\n    file.write('Hello, World!')",
+      "tags":[
+        "file I/O",
+        "write file",
+        "python"
+      ]
+    },
+    {
+      "description":"Creating a list comprehension",
+      "code":"squares = [x * x for x in range(10)]",
+      "tags":[
+        "list comprehension",
+        "python"
+      ]
+    },
+    {
+      "description":"Creating a dictionary comprehension",
+      "code":"square_dict = {x: x * x for x in range(5)}",
+      "tags":[
+        "dictionary comprehension",
+        "python"
+      ]
+    },
+    {
+      "description":"Creating a set comprehension",
+      "code":"squares_set = {x * x for x in range(5)}",
+      "tags":[
+        "set comprehension",
+        "python"
+      ]
+    },
+    {
+      "description":"Creating a generator expression",
+      "code":"squares_gen = (x * x for x in range(10))",
+      "tags":[
+        "generator expression",
+        "python"
+      ]
+    },
+    {
+      "description":"Zipping two lists together",
+      "code":"names = ['Alice', 'Bob', 'Charlie']\nages = [24, 50, 18]\npeople = dict(zip(names, ages))",
+      "tags":[
+        "zip",
+        "python"
+      ]
+    },
+    {
+      "description":"Unpacking a sequence into variables",
+      "code":"data = ('Alice', 24, 'Engineer')\nname, age, profession = data",
+      "tags":[
+        "unpacking",
+        "python"
+      ]
+    },
+    {
+      "description":"Using a function with *args and **kwargs",
+      "code":"def function_with_args(*args, **kwargs):\n    print('Args:', args)\n    print('Kwargs:', kwargs)",
+      "tags":[
+        "args",
+        "kwargs",
+        "python"
+      ]
+    },
+    {
+      "description":"Using map function to apply a function to all items in a list",
+      "code":"def square(x):\n    return x * x\nnumbers = [1, 2, 3, 4, 5]\nsquared_numbers = list(map(square, numbers))",
+      "tags":[
+        "map",
+        "python"
+      ]
+    },
+    {
+      "description":"Filtering items in a list",
+      "code":"numbers = [1, 2, 3, 4, 5, 6]\neven_numbers = list(filter(lambda x: x % 2 == 0, numbers))",
+      "tags":[
+        "filter",
+        "lambda",
+        "python"
+      ]
+    },
+    {
+      "description":"Using enumerate to get index and value in a loop",
+      "code":"names = ['Alice', 'Bob', 'Charlie']\nfor index, name in enumerate(names):\n    print(f'Index {index}: {name}')",
+      "tags":[
+        "enumerate",
+        "loop",
+        "python"
+      ]
+    },
+    {
+      "description":"Try-except block for exception handling",
+      "code":"try:\n    x = 1 / 0\nexcept ZeroDivisionError as e:\n    print('Error:', e)",
+      "tags":[
+        "exception handling",
+        "try except",
+        "python"
+      ]
+    },
+    {
+      "description":"Using the reduce function from functools",
+      "code":"from functools import reduce\nnumbers = [1, 2, 3, 4, 5]\nsum_all = reduce(lambda x, y: x + y, numbers)",
+      "tags":[
+        "reduce",
+        "functools",
+        "python"
+      ]
+    },
+    {
+      "description":"List slicing to reverse a list",
+      "code":"numbers = [1, 2, 3, 4, 5]\nreversed_numbers = numbers[::-1]",
+      "tags":[
+        "list slicing",
+        "reverse",
+        "python"
+      ]
+    },
+    {
+      "description":"Using itertools.chain to flatten a list of lists",
+      "code":"import itertools\nlist_of_lists = [[1, 2], [3, 4], [5, 6]]\nflattened_list = list(itertools.chain(*list_of_lists))",
+      "tags":[
+        "itertools",
+        "chain",
+        "flatten",
+        "python"
+      ]
+    },
+    {
+      "description":"Using the any function to check if any element in a list is True",
+      "code":"values = [False, False, True]\nif any(values):\n    print('At least one True value exists.')",
+      "tags":[
+        "any",
+        "python"
+      ]
+    },
+    {
+      "description":"Using the all function to check if all elements in a list are True",
+      "code":"values = [True, True, True]\nif all(values):\n    print('All values are True.')",
+      "tags":[
+        "all",
+        "python"
+      ]
+    },
+    {
+      "description":"Using collections.Counter to count occurrences in a list",
+      "code":"from collections import Counter\nwords = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']\nword_counts = Counter(words)",
+      "tags":[
+        "collections",
+        "Counter",
+        "count occurrences",
+        "python"
+      ]
+    },
+    {
+      "description":"Using a lambda function to sort a list of tuples by the second item",
+      "code":"pairs = [(1, 'one'), (3, 'three'), (2, 'two')]\nsorted_pairs = sorted(pairs, key=lambda pair: pair[1])",
+      "tags":[
+        "lambda",
+        "sort",
+        "tuples",
+        "python"
+      ]
+    }
+  ]
+}

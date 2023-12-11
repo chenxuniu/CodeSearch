@@ -1,0 +1,2750 @@
+{
+  "dataset": [
+    {
+      "description": "Reverse a string in Python",
+      "code": "string[::-1]",
+      "tags": [
+        "python",
+        "string",
+        "reverse"
+      ]
+    },
+    {
+      "description": "Function to add two numbers in Python",
+      "code": "def add(a, b): return a + b",
+      "tags": [
+        "python",
+        "function",
+        "math",
+        "addition"
+      ]
+    },
+    {
+      "description": "Iterate over a list using a for loop",
+      "code": "for item in my_list: print(item)",
+      "tags": [
+        "python",
+        "list",
+        "loop",
+        "iteration"
+      ]
+    },
+    {
+      "description": "Check if a dictionary contains a specific key",
+      "code": "if 'key_name' in my_dict: print('Key exists')",
+      "tags": [
+        "python",
+        "dictionary",
+        "key"
+      ]
+    },
+    {
+      "description": "Create a list comprehension to generate a list of squares",
+      "code": "[x*x for x in range(10)]",
+      "tags": [
+        "python",
+        "list comprehension",
+        "math"
+      ]
+    },
+    {
+      "description": "Open and read a file in Python",
+      "code": "\nwith open('filename.txt', 'r') as file:\n    content = file.read()\nprint(content)\n        ",
+      "tags": [
+        "python",
+        "file",
+        "read",
+        "I/O"
+      ]
+    },
+    {
+      "description": "Define a lambda function to square a number",
+      "code": "square = lambda x: x*x",
+      "tags": [
+        "python",
+        "lambda",
+        "function",
+        "math"
+      ]
+    },
+    {
+      "description": "Catch exceptions using try-except blocks",
+      "code": "\ntry:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero!\")\n        ",
+      "tags": [
+        "python",
+        "exception",
+        "try-except",
+        "error handling"
+      ]
+    },
+    {
+      "description": "Use list's append method to add an item",
+      "code": "my_list.append('new_item')",
+      "tags": [
+        "python",
+        "list",
+        "append"
+      ]
+    },
+    {
+      "description": "Convert a list of strings into a single string",
+      "code": "joined_string = ' '.join(my_list_of_strings)",
+      "tags": [
+        "python",
+        "string",
+        "join",
+        "list"
+      ]
+    },
+    {
+      "description": "Get the current date and time using datetime",
+      "code": "\nfrom datetime import datetime\ncurrent_datetime = datetime.now()\n        ",
+      "tags": [
+        "python",
+        "datetime",
+        "current time"
+      ]
+    },
+    {
+      "description": "Sort a list of numbers in descending order",
+      "code": "sorted_list = sorted(my_list, reverse=True)",
+      "tags": [
+        "python",
+        "list",
+        "sort"
+      ]
+    },
+    {
+      "description": "Filter even numbers from a list using list comprehension",
+      "code": "even_numbers = [x for x in my_list if x % 2 == 0]",
+      "tags": [
+        "python",
+        "list comprehension",
+        "filter"
+      ]
+    },
+    {
+      "description": "Use the map function to apply a function to each item of a list",
+      "code": "squared_numbers = list(map(lambda x: x*x, numbers))",
+      "tags": [
+        "python",
+        "map",
+        "list",
+        "lambda"
+      ]
+    },
+    {
+      "description": "Define a class with an instance method",
+      "code": "\nclass MyClass:\n    def my_method(self):\n        print(\"This is my method!\")\n        ",
+      "tags": [
+        "python",
+        "class",
+        "OOP",
+        "method"
+      ]
+    },
+    {
+      "description": "Implementing a basic singly linked list with insertion and display methods",
+      "code": "\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def insert(self, data):\n        new_node = Node(data)\n        if not self.head:\n            self.head = new_node\n        else:\n            current = self.head\n            while current.next:\n                current = current.next\n            current.next = new_node\n\n    def display(self):\n        current = self.head\n        while current:\n            print(current.data, end=' -> ')\n            current = current.next\n        print('None')\n        ",
+      "tags": [
+        "python",
+        "linked list",
+        "data structure"
+      ]
+    },
+    {
+      "description": "Decorator to time the execution of a function",
+      "code": "\nimport time\n\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f'Function {func.__name__} executed in {end - start:.4f} seconds')\n        return result\n    return wrapper\n\n@timer\ndef example_function():\n    time.sleep(2)\n        ",
+      "tags": [
+        "python",
+        "decorator",
+        "timer",
+        "function"
+      ]
+    },
+    {
+      "description": "Implement a basic binary search algorithm",
+      "code": "\ndef binary_search(arr, x):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] < x:\n            low = mid + 1\n        elif arr[mid] > x:\n            high = mid - 1\n        else:\n            return mid\n    return -1\n        ",
+      "tags": [
+        "python",
+        "algorithm",
+        "search",
+        "binary search"
+      ]
+    },
+    {
+      "description": "Using context manager to handle file operations",
+      "code": "\nclass File:\n    def __init__(self, filename, mode):\n        self.filename = filename\n        self.mode = mode\n\n    def __enter__(self):\n        self.file = open(self.filename, self.mode)\n        return self.file\n\n    def __exit__(self, exc_type, exc_val, traceback):\n        self.file.close()\n\nwith File('sample.txt', 'r') as f:\n    content = f.read()\n        ",
+      "tags": [
+        "python",
+        "context manager",
+        "file",
+        "I/O",
+        "with statement"
+      ]
+    },
+    {
+      "description": "Factorial function using recursion",
+      "code": "\ndef factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n-1)\n        ",
+      "tags": [
+        "python",
+        "recursion",
+        "math",
+        "factorial"
+      ]
+    },
+    {
+      "description": "Calculate the eigenvalues and eigenvectors of a matrix",
+      "code": "\nimport numpy as np\n\nA = np.array([[1, 2], [3, 4]])\neigenvalues, eigenvectors = np.linalg.eig(A)\n        ",
+      "tags": [
+        "numpy",
+        "eigenvalues",
+        "eigenvectors",
+        "linalg"
+      ]
+    },
+    {
+      "description": "Perform Singular Value Decomposition (SVD)",
+      "code": "\nimport numpy as np\n\nA = np.array([[1, 2], [3, 4]])\nU, s, VT = np.linalg.svd(A)\n        ",
+      "tags": [
+        "numpy",
+        "svd",
+        "decomposition"
+      ]
+    },
+    {
+      "description": "Create a two-dimensional Gaussian function",
+      "code": "\nimport numpy as np\n\nx = np.linspace(-5, 5, 100)\ny = np.linspace(-5, 5, 100)\nx, y = np.meshgrid(x, y)\ngaussian = np.exp(-(x**2 + y**2))\n        ",
+      "tags": [
+        "numpy",
+        "gaussian",
+        "meshgrid"
+      ]
+    },
+    {
+      "description": "Solve a system of linear equations",
+      "code": "\nimport numpy as np\n\nA = np.array([[3,1], [1,2]])\nb = np.array([9,8])\nx = np.linalg.solve(A, b)\n        ",
+      "tags": [
+        "numpy",
+        "linear equations",
+        "linalg",
+        "solve"
+      ]
+    },
+    {
+      "description": "Perform a Fast Fourier Transform (FFT)",
+      "code": "\nimport numpy as np\n\nx = np.linspace(0, 100, 10000)\ny = np.sin(x)\n\nfft_result = np.fft.fft(y)\n        ",
+      "tags": [
+        "numpy",
+        "fft",
+        "fourier transform"
+      ]
+    },
+    {
+      "description": "Generate a random sample from a normal (Gaussian) distribution",
+      "code": "\nimport numpy as np\n\nmean = 0\nstd_dev = 1\nsize = 1000\n\nsample = np.random.normal(mean, std_dev, size)\n        ",
+      "tags": [
+        "numpy",
+        "random",
+        "normal distribution",
+        "statistics"
+      ]
+    },
+    {
+      "description": "Compute the convolution of two vectors",
+      "code": "\nimport numpy as np\n\nv1 = np.array([1, 2, 3])\nv2 = np.array([0, 1, 0.5])\n\nconv_result = np.convolve(v1, v2)\n        ",
+      "tags": [
+        "numpy",
+        "convolution",
+        "signal processing"
+      ]
+    },
+    {
+      "description": "Calculate the determinant of a matrix",
+      "code": "\nimport numpy as np\n\nA = np.array([[1, 2], [3, 4]])\ndet_A = np.linalg.det(A)\n        ",
+      "tags": [
+        "numpy",
+        "determinant",
+        "linalg"
+      ]
+    },
+    {
+      "description": "Perform an element-wise multiplication of two matrices (Hadamard product)",
+      "code": "\nimport numpy as np\n\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\nhadamard_product = A * B\n        ",
+      "tags": [
+        "numpy",
+        "matrices",
+        "element-wise",
+        "hadamard product"
+      ]
+    },
+    {
+      "description": "Interpolate a set of points using a cubic spline",
+      "code": "\nimport numpy as np\nfrom scipy.interpolate import CubicSpline\n\nx = np.array([0, 1, 2, 3, 4])\ny = np.array([1, 3, 2, 5, 4])\n\ncs = CubicSpline(x, y)\nx_new = np.linspace(0, 4, 100)\ny_new = cs(x_new)\n        ",
+      "tags": [
+        "numpy",
+        "interpolation",
+        "cubic spline"
+      ]
+    },
+    {
+      "description": "Reverse a string using a stack",
+      "code": "\ndef reverse_string(s):\n    stack = list(s)\n    reversed_string = ''\n    while stack:\n        reversed_string += stack.pop()\n    return reversed_string\n\nreversed_s = reverse_string('hello')\n        ",
+      "tags": [
+        "stack",
+        "string"
+      ]
+    },
+    {
+      "description": "Check for balanced parentheses using a stack",
+      "code": "\ndef is_balanced(expression):\n    matching_braces = {')': '(', ']': '[', '}': '{'}\n    stack = []\n    for char in expression:\n        if char in matching_braces.values():\n            stack.append(char)\n        elif char in matching_braces:\n            if not stack or matching_braces[char] != stack.pop():\n                return False\n    return not stack\n\nbalanced = is_balanced('(a+[b*c]-{d/e})')\n        ",
+      "tags": [
+        "stack",
+        "parentheses",
+        "balanced"
+      ]
+    },
+    {
+      "description": "Perform breadth-first search (BFS) on a graph",
+      "code": "\nfrom collections import deque\n\ndef bfs(graph, start):\n    visited = set()\n    queue = deque([start])\n    \n    while queue:\n        vertex = queue.popleft()\n        if vertex not in visited:\n            visited.add(vertex)\n            queue.extend(set(graph[vertex]) - visited)\n    return visited\n\ngraph = {1: [2, 3], 2: [4, 5], 3: [5], 4: [], 5: [6], 6: []}\nbfs_visited = bfs(graph, 1)\n        ",
+      "tags": [
+        "graph",
+        "bfs",
+        "deque"
+      ]
+    },
+    {
+      "description": "Implement a queue using two stacks",
+      "code": "\nclass Queue:\n    def __init__(self):\n        self.stack_in = []\n        self.stack_out = []\n\n    def enqueue(self, val):\n        self.stack_in.append(val)\n\n    def dequeue(self):\n        if not self.stack_out:\n            while self.stack_in:\n                self.stack_out.append(self.stack_in.pop())\n        return self.stack_out.pop() if self.stack_out else None\n\nqueue = Queue()\nqueue.enqueue(1)\nqueue.enqueue(2)\ndequeued_item = queue.dequeue()\n        ",
+      "tags": [
+        "queue",
+        "stack"
+      ]
+    },
+    {
+      "description": "Find the most common element in a list using a counter",
+      "code": "\nfrom collections import Counter\n\ndef most_common_element(lst):\n    return Counter(lst).most_common(1)[0][0]\n\nlst = [1, 3, 3, 3, 2, 2, 2, 2, 4, 4, 5]\nmost_common = most_common_element(lst)\n        ",
+      "tags": [
+        "list",
+        "counter"
+      ]
+    },
+    {
+      "description": "Implement a priority queue and insert elements with priorities",
+      "code": "\nfrom queue import PriorityQueue\n\npq = PriorityQueue()\npq.put((10, 'low priority'))\npq.put((1, 'high priority'))\npq.put((5, 'medium priority'))\n\nwhile not pq.empty():\n    print(pq.get())\n        ",
+      "tags": [
+        "priority queue"
+      ]
+    },
+    {
+      "description": "Merge multiple sorted lists into one sorted list",
+      "code": "\nfrom heapq import merge\n\ndef merge_sorted_lists(*lists):\n    return list(merge(*lists))\n\nmerged_list = merge_sorted_lists([1, 4, 5], [1, 3, 4], [2, 6])\n        ",
+      "tags": [
+        "list",
+        "heapq",
+        "merge"
+      ]
+    },
+    {
+      "description": "Use set operations to find the intersection of two arrays",
+      "code": "\ndef intersection(arr1, arr2):\n    return list(set(arr1) & set(arr2))\n\narr1 = [4, 9, 5]\narr2 = [9, 4, 9, 8, 4]\nintersected = intersection(arr1, arr2)\n        ",
+      "tags": [
+        "set",
+        "intersection"
+      ]
+    },
+    {
+      "description": "Create a doubly linked list and implement insertion",
+      "code": "\nclass Node:\n    def __init__(self, value):\n        self.value = value\n        self.prev = None\n        self.next = None\n\nclass DoublyLinkedList:\n    def __init__(self):\n        self.head = None\n\n    def insert(self, value):\n        new_node = Node(value)\n        new_node.next = self.head\n        if self.head is not None:\n            self.head.prev = new_node\n        self.head = new_node\n\ndll = DoublyLinkedList()\ndll.insert(2)\ndll.insert(1)\n        ",
+      "tags": [
+        "doubly linked list",
+        "insert"
+      ]
+    },
+    {
+      "description": "Calculate the prime factors of a number",
+      "code": "\ndef prime_factors(n):\n    factors = []\n    # Number of 2s that divide n\n    while n % 2 == 0:\n        factors.append(2)\n        n //= 2\n    # n must be odd at this point\n    for i in range(3, int(sqrt(n)) + 1, 2):\n        while n % i == 0:\n            factors.append(i)\n            n //= i\n    # Condition if n is a prime number greater than 2\n    if n > 2:\n        factors.append(n)\n    return factors\n\nfactors_of_315 = prime_factors(315)\n        ",
+      "tags": [
+        "math",
+        "prime factors"
+      ]
+    },
+    {
+      "description": "Calculate the greatest common divisor (GCD) of two numbers",
+      "code": "\nfrom math import gcd\n\ndef calculate_gcd(x, y):\n    return gcd(x, y)\n\ngcd_of_8_and_12 = calculate_gcd(8, 12)\n        ",
+      "tags": [
+        "math",
+        "gcd"
+      ]
+    },
+    {
+      "description": "Find all combinations of a given size from a list",
+      "code": "\nfrom itertools import combinations\n\ndef find_combinations(arr, r):\n    return list(combinations(arr, r))\n\ncombinations_of_2_from_12345 = find_combinations([1, 2, 3, 4, 5], 2)\n        ",
+      "tags": [
+        "math",
+        "combinations"
+      ]
+    },
+    {
+      "description": "Calculate the least common multiple (LCM) of two numbers",
+      "code": "\ndef lcm(x, y):\n    return x * y // gcd(x, y)\n\nlcm_of_4_and_5 = lcm(4, 5)\n        ",
+      "tags": [
+        "math",
+        "lcm"
+      ]
+    },
+    {
+      "description": "Check if a number is a palindrome",
+      "code": "\ndef is_palindrome(num):\n    return str(num) == str(num)[::-1]\n\nis_number_palindrome = is_palindrome(12321)\n        ",
+      "tags": [
+        "math",
+        "palindrome"
+      ]
+    },
+    {
+      "description": "Solve a linear equation ax + b = 0",
+      "code": "\nfrom sympy import symbols, Eq, solve\n\ndef solve_linear_equation(a, b):\n    x = symbols('x')\n    equation = Eq(a*x + b, 0)\n    return solve(equation, x)\n\nsolution_to_equation = solve_linear_equation(2, -3)\n        ",
+      "tags": [
+        "math",
+        "equation",
+        "sympy"
+      ]
+    },
+    {
+      "description": "Calculate the Fibonacci sequence up to n elements",
+      "code": "\ndef fibonacci(n):\n    fib_sequence = [0, 1]\n    for i in range(2, n):\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n    return fib_sequence[:n]\n\nfirst_7_fibonacci_numbers = fibonacci(7)\n        ",
+      "tags": [
+        "math",
+        "fibonacci"
+      ]
+    },
+    {
+      "description": "Check if a number is prime",
+      "code": "\ndef is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(sqrt(n)) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nis_11_prime = is_prime(11)\n        ",
+      "tags": [
+        "math",
+        "prime"
+      ]
+    },
+    {
+      "description": "Calculate the area of a triangle given three sides (Heron's formula)",
+      "code": "\ndef herons_formula(a, b, c):\n    s = (a + b + c) / 2\n    area = sqrt(s * (s - a) * (s - b) * (s - c))\n    return area\n\narea_of_triangle = herons_formula(3, 4, 5)\n        ",
+      "tags": [
+        "math",
+        "triangle",
+        "area"
+      ]
+    },
+    {
+      "description": "Calculate the nth root of a number",
+      "code": "\ndef nth_root(num, root):\n    return num ** (1 / root)\n\ncubic_root_of_8 = nth_root(8, 3)\n        ",
+      "tags": [
+        "math",
+        "nth root"
+      ]
+    },
+    {
+      "description": "Traverse a binary tree using in-order traversal",
+      "code": "\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef in_order_traversal(root):\n    return in_order_traversal(root.left) + [root.val] + in_order_traversal(root.right) if root else []\n\n# Example Usage:\n# Construct a binary tree:     1\n#                            /   \\\n#                           2     3\n#                          / \\   /\n#                         4   5 6\nroot = TreeNode(1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3, TreeNode(6)))\nin_order = in_order_traversal(root)\n        ",
+      "tags": [
+        "tree",
+        "binary tree",
+        "in-order"
+      ]
+    },
+    {
+      "description": "Traverse a graph using depth-first search (DFS)",
+      "code": "\ndef dfs(graph, start, visited=None):\n    if visited is None:\n        visited = set()\n    visited.add(start)\n    for next_node in graph[start] - visited:\n        dfs(graph, next_node, visited)\n    return visited\n\n# Example Usage:\ngraph = {'A': set(['B', 'C']),\n         'B': set(['A', 'D', 'E']),\n         'C': set(['A', 'F']),\n         'D': set(['B']),\n         'E': set(['B', 'F']),\n         'F': set(['C', 'E'])}\ndfs_visited = dfs(graph, 'A')\n        ",
+      "tags": [
+        "graph",
+        "dfs"
+      ]
+    },
+    {
+      "description": "Perform a level-order traversal on a binary tree",
+      "code": "\ndef level_order_traversal(root):\n    levels = []\n    if not root:\n        return levels\n    queue = deque([root])\n    while queue:\n        level_size = len(queue)\n        level = []\n        for i in range(level_size):\n            node = queue.popleft()\n            level.append(node.val)\n            if node.left:\n                queue.append(node.left)\n            if node.right:\n                queue.append(node.right)\n        levels.append(level)\n    return levels\n\n# Example Usage: Use the binary tree from the previous example\nlevel_order = level_order_traversal(root)\n        ",
+      "tags": [
+        "tree",
+        "binary tree",
+        "level-order"
+      ]
+    },
+    {
+      "description": "Traverse a matrix in spiral order",
+      "code": "\ndef spiral_order(matrix):\n    res = []\n    while matrix:\n        res += matrix.pop(0)\n        matrix = list(zip(*matrix))[::-1]  # Rotate the matrix\n    return res\n\n# Example Usage:\nmatrix = [\n [ 1, 2, 3 ],\n [ 4, 5, 6 ],\n [ 7, 8, 9 ]\n]\nspiral = spiral_order(matrix)\n        ",
+      "tags": [
+        "array",
+        "matrix",
+        "spiral"
+      ]
+    },
+    {
+      "description": "Implement Breadth-First Search (BFS) for a graph",
+      "code": "\ndef bfs(graph, start):\n    visited = []\n    queue = deque([start])\n    while queue:\n        vertex = queue.popleft()\n        if vertex not in visited:\n            visited.append(vertex)\n            queue.extend(graph[vertex] - set(visited))\n    return visited\n\n# Example Usage: Use the graph from the DFS example\nbfs_visited = bfs(graph, 'A')\n        ",
+      "tags": [
+        "graph",
+        "bfs"
+      ]
+    },
+    {
+      "description": "Pre-order traversal of a binary tree",
+      "code": "\ndef pre_order_traversal(root):\n    return [root.val] + pre_order_traversal(root.left) + pre_order_traversal(root.right) if root else []\n\n# Example Usage: Use the binary tree from the in-order traversal example\npre_order = pre_order_traversal(root)\n        ",
+      "tags": [
+        "tree",
+        "binary tree",
+        "pre-order"
+      ]
+    },
+    {
+      "description": "Post-order traversal of a binary tree",
+      "code": "\ndef post_order_traversal(root):\n    return post_order_traversal(root.left) + post_order_traversal(root.right) + [root.val] if root else []\n\n# Example Usage: Use the binary tree from the in-order traversal example\npost_order = post_order_traversal(root)\n        ",
+      "tags": [
+        "tree",
+        "binary tree",
+        "post-order"
+      ]
+    },
+    {
+      "description": "Find the shortest path in a grid avoiding obstacles",
+      "code": "\ndef shortest_path_grid(grid, start, end):\n    queue = deque([[start]])\n    visited = set([start])\n    while queue:\n        path = queue.popleft()\n        x, y = path[-1]\n        if (x, y) == end:\n            return path\n        for dx, dy in [(1,0), (-1,0), (0,1), (0,-1)]:  # Directions\n            nx, ny = x + dx, y + dy\n            if 0 <= nx < len(grid) and 0 <= ny < len(grid[0]) and grid[nx][ny] == 0 and (nx, ny) not in visited:\n                queue.append(path + [(nx, ny)])\n                visited.add((nx, ny))\n    return []\n\n# Example Usage:\ngrid = [[0, 0, 0], [1, 1, 0], [1, 1, 0]]\nstart = (0, 0)\nend = (2, 2)\nshortest_path = shortest_path_grid(grid, start, end)\n        ",
+      "tags": [
+        "grid",
+        "shortest path"
+      ]
+    },
+    {
+      "description": "Determine if a string has all unique characters.",
+      "code": "\ndef is_unique(s):\n    return len(set(s)) == len(s)\n\n# Example Usage:\nunique_string = \"abcdef\"\nnot_unique_string = \"aabbcc\"\nis_unique(unique_string)  # Returns True\nis_unique(not_unique_string)  # Returns False\n        ",
+      "tags": [
+        "string",
+        "unique characters"
+      ]
+    },
+    {
+      "description": "Check if two strings are permutations of each other.",
+      "code": "\nfrom collections import Counter\n\ndef are_permutations(str1, str2):\n    return Counter(str1) == Counter(str2)\n\n# Example Usage:\nstr1 = \"abcde\"\nstr2 = \"edcba\"\nstr3 = \"abcda\"\nare_permutations(str1, str2)  # Returns True\nare_permutations(str1, str3)  # Returns False\n        ",
+      "tags": [
+        "string",
+        "permutation"
+      ]
+    },
+    {
+      "description": "Find the 'Kth' max value in a binary search tree.",
+      "code": "\nclass TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef kth_largest(root, k):\n    # Perform reverse in-order traversal\n    def reverse_inorder(r):\n        if r is not None:\n            yield from reverse_inorder(r.right)\n            yield r.val\n            yield from reverse_inorder(r.left)\n            \n    gen = reverse_inorder(root)\n    for _ in range(k):\n        kth = next(gen)\n    return kth\n\n# Example Usage:\n# Construct a binary search tree:     5\n#                                    /   \\\n#                                   3     7\n#                                  / \\   / \\\n#                                 2   4  6   8\nroot = TreeNode(5, TreeNode(3, TreeNode(2), TreeNode(4)), TreeNode(7, TreeNode(6), TreeNode(8)))\nk = 3\nkth_largest_value = kth_largest(root, k)  # Returns 6\n        ",
+      "tags": [
+        "binary search tree",
+        "kth largest"
+      ]
+    },
+    {
+      "description": "Write a function to get the intersection point of two linked lists.",
+      "code": "\nclass ListNode:\n    def __init__(self, x):\n        self.val = x\n        self.next = None\n\ndef get_intersection_node(headA, headB):\n    nodes_in_B = set()\n    while headB is not None:\n        nodes_in_B.add(headB)\n        headB = headB.next\n    while headA is not None:\n        if headA in nodes_in_B:\n            return headA\n        headA = headA.next\n    return None\n\n# Example Usage:\n# Skip the list creation part for brevity. Assume we have two intersecting linked lists.\nintersection_node = get_intersection_node(list_headA, list_headB)\n        ",
+      "tags": [
+        "linked list",
+        "intersection"
+      ]
+    },
+    {
+      "description": "Binary Search: Search a sorted array by repeatedly dividing the search interval in half.",
+      "code": "def binary_search(arr, target):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n\n# Example Usage:\narr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\ntarget = 7\nindex = binary_search(arr, target)  # Returns the index of the target if found, otherwise -1",
+      "tags": [
+        "algorithm",
+        "binary search",
+        "search"
+      ]
+    },
+    {
+      "description": "Quick Sort: Sort an array using the divide and conquer approach.",
+      "code": "def quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick_sort(left) + middle + quick_sort(right)\n\n# Example Usage:\narr = [3, 6, 8, 10, 1, 2, 1]\nsorted_arr = quick_sort(arr)",
+      "tags": [
+        "algorithm",
+        "quick sort",
+        "sort"
+      ]
+    },
+    {
+      "description": "Merge Sort: Sort an array by dividing it into halves, sorting each half, and merging them.",
+      "code": "def merge_sort(arr):\n    if len(arr) > 1:\n        mid = len(arr) // 2\n        L = arr[:mid]\n        R = arr[mid:]\n\n        merge_sort(L)\n        merge_sort(R)\n\n        i = j = k = 0\n\n        while i < len(L) and j < len(R):\n            if L[i] < R[j]:\n                arr[k] = L[i]\n                i += 1\n            else:\n                arr[k] = R[j]\n                j += 1\n            k += 1\n\n        while i < len(L):\n            arr[k] = L[i]\n            i += 1\n            k += 1\n\n        while j < len(R):\n            arr[k] = R[j]\n            j += 1\n            k += 1\n    return arr\n\n# Example Usage:\narr = [12, 11, 13, 5, 6, 7]\nsorted_arr = merge_sort(arr)",
+      "tags": [
+        "algorithm",
+        "merge sort",
+        "sort"
+      ]
+    },
+    {
+      "description": "Depth-First Search (DFS) on a graph.",
+      "code": "def dfs(graph, start, visited=None):\n    if visited is None:\n        visited = set()\n    visited.add(start)\n    for next in graph[start]:\n        if next not in visited:\n            dfs(graph, next, visited)\n    return visited\n\n# Example Usage:\ngraph = {'A': set(['B', 'C']),\n         'B': set(['A', 'D', 'E']),\n         'C': set(['A', 'F']),\n         'D': set(['B']),\n         'E': set(['B', 'F']),\n         'F': set(['C', 'E'])}\ndfs_visited = dfs(graph, 'A')",
+      "tags": [
+        "algorithm",
+        "dfs",
+        "graph"
+      ]
+    },
+    {
+      "description": "Breadth-First Search (BFS) on a graph.",
+      "code": "from collections import deque\n\ndef bfs(graph, start):\n    visited, queue = set(), deque([start])\n    visited.add(start)\n    while queue:\n        vertex = queue.popleft()\n        for neighbour in graph[vertex]:\n            if neighbour not in visited:\n                visited.add(neighbour)\n                queue.append(neighbour)\n    return visited\n\n# Example Usage:\nbfs_visited = bfs(graph, 'A')",
+      "tags": [
+        "algorithm",
+        "bfs",
+        "graph"
+      ]
+    },
+    {
+      "description": "Dijkstra's Algorithm: Find the shortest paths from a start vertex to all other vertices in a weighted graph.",
+      "code": "import heapq\n\ndef dijkstra(graph, start):\n    distances = {vertex: float('infinity') for vertex in graph}\n    distances[start] = 0\n    pq = [(0, start)]\n    while len(pq) > 0:\n        current_distance, current_vertex = heapq.heappop(pq)\n        if current_distance > distances[current_vertex]:\n            continue\n        for neighbor, weight in graph[current_vertex].items():\n            distance = current_distance + weight\n            if distance < distances[neighbor]:\n                distances[neighbor] = distance\n                heapq.heappush(pq, (distance, neighbor))\n    return distances\n\n# Example Usage:\ngraph = {\n    'A': {'B': 1, 'C': 4},\n    'B': {'A': 1, 'C': 2, 'D': 5},\n    'C': {'A': 4, 'B': 2, 'D': 1},\n    'D': {'B': 5, 'C': 1}\n}\ndistances = dijkstra(graph, 'A')",
+      "tags": [
+        "algorithm",
+        "dijkstra",
+        "graph",
+        "shortest path"
+      ]
+    },
+    {
+      "description": "Bellman-Ford Algorithm: Compute shortest paths from a single source vertex to all other vertices in a weighted graph.",
+      "code": "def bellman_ford(graph, start):\n    distance = {vertex: float('infinity') for vertex in graph}\n    distance[start] = 0\n\n    for _ in range(len(graph) - 1):\n        for vertex in graph:\n            for neighbour, weight in graph[vertex].items():\n                if distance[vertex] + weight < distance[neighbour]:\n                    distance[neighbour] = distance[vertex] + weight\n\n    for vertex in graph:\n        for neighbour, weight in graph[vertex].items():\n            if distance[vertex] + weight < distance[neighbour]:\n                raise ValueError(\"Graph contains a negative weight cycle\")\n    return distance\n\n# Example Usage:\ngraph = {\n    'A': {'B': -1, 'C': 4},\n    'B': {'C': 3, 'D': 2, 'E': 2},\n    'C': {},\n    'D': {'B': 1, 'C': 5},\n    'E': {'D': -3}\n}\ndistances = bellman_ford(graph, 'A')",
+      "tags": [
+        "algorithm",
+        "bellman-ford",
+        "graph",
+        "shortest path"
+      ]
+    },
+    {
+      "description": "Floyd-Warshall Algorithm: Find the shortest paths between all pairs of vertices in a weighted graph.",
+      "code": "def floyd_warshall(vertices, edges):\n    distance = {v: dict.fromkeys(vertices, float('infinity')) for v in vertices}\n    for v in vertices:\n        distance[v][v] = 0\n    for u, v, w in edges:\n        distance[u][v] = w\n    for k in vertices:\n        for i in vertices:\n            for j in vertices:\n                distance[i][j] = min(distance[i][j], distance[i][k] + distance[k][j])\n    return distance",
+      "tags": [
+        "algorithm",
+        "floyd-warshall",
+        "graph",
+        "shortest path"
+      ]
+    },
+    {
+      "description": "Knapsack Problem: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.",
+      "code": "def knapsack(values, weights, capacity):\n    n = len(values)\n    dp = [[0 for x in range(capacity + 1)] for x in range(n + 1)]\n    for i in range(1, n + 1):\n        for w in range(1, capacity + 1):\n            if weights[i-1] <= w:\n                dp[i][w] = max(values[i-1] + dp[i-1][w-weights[i-1]], dp[i-1][w])\n            else:\n                dp[i][w] = dp[i-1][w]\n    return dp[n][capacity]",
+      "tags": [
+        "algorithm",
+        "knapsack",
+        "dynamic programming"
+      ]
+    },
+    {
+      "description": "Prim's Algorithm: Find the minimum spanning tree for a connected weighted undirected graph.",
+      "code": "import heapq\n\ndef prims(vertices, edges):\n    adj_list = {v: [] for v in vertices}\n    for u, v, w in edges:\n        adj_list[u].append((v, w))\n        adj_list[v].append((u, w))\n    mst = set()\n    used_vertices = set(vertices[:1])\n    candidate_edges = adj_list[vertices[0]][:]\n    heapq.heapify(candidate_edges)\n    while candidate_edges:\n        weight, vertex = heapq.heappop(candidate_edges)\n        if vertex not in used_vertices:\n            used_vertices.add(vertex)\n            mst.add((weight, vertex))\n            for next_vertex, next_weight in adj_list[vertex]:\n                if next_vertex not in used_vertices:\n                    heapq.heappush(candidate_edges, (next_weight, next_vertex))\n    return mst",
+      "tags": [
+        "algorithm",
+        "prims",
+        "graph",
+        "minimum spanning tree"
+      ]
+    },
+    {
+      "description": "Kruskal's Algorithm: Find the minimum spanning tree for a disconnected weighted undirected graph.",
+      "code": "def find(parent, i):\n    if parent[i] == i:\n        return i\n    return find(parent, parent[i])\n\ndef union(parent, rank, x, y):\n    xroot = find(parent, x)\n    yroot = find(parent, y)\n    if rank[xroot] < rank[yroot]:\n        parent[xroot] = yroot\n    elif rank[xroot] > rank[yroot]:\n        parent[yroot] = xroot\n    else:\n        parent[yroot] = xroot\n        rank[xroot] += 1\n\ndef kruskals(vertices, edges):\n    result = []\n    i = e = 0\n    parent = []\n    rank = []\n    edges = sorted(edges, key=lambda item: item[2])\n    for node in vertices:\n        parent.append(node)\n        rank.append(0)\n    while e < len(vertices) -1:\n        u, v, w = edges[i]\n        i = i + 1\n        x = find(parent, u)\n        y = find(parent, v)\n        if x != y:\n            e = e + 1\n            result.append((u, v, w))\n            union(parent, rank, x, y)\n    return result",
+      "tags": [
+        "algorithm",
+        "kruskals",
+        "graph",
+        "minimum spanning tree"
+      ]
+    },
+    {
+      "description": "Binary Search: Search a sorted array by repeatedly dividing the search interval in half.",
+      "code": "def binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        guess = arr[mid]\n        if guess == target:\n            return mid\n        if guess > target:\n            high = mid - 1\n        else:\n            low = mid + 1\n    return None",
+      "tags": [
+        "algorithm",
+        "binary search",
+        "search"
+      ]
+    },
+    {
+      "description": "Quick Sort: Sort an array by partitioning elements into smaller arrays, then recursively sorting the sub-arrays.",
+      "code": "def quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick_sort(left) + middle + quick_sort(right)",
+      "tags": [
+        "algorithm",
+        "quick sort",
+        "sort"
+      ]
+    },
+    {
+      "description": "Merge Sort: Sort an array by dividing it into halves, sorting the halves, and merging them back together.",
+      "code": "def merge_sort(arr):\n    if len(arr) > 1:\n        mid = len(arr) // 2\n        L = arr[:mid]\n        R = arr[mid:]\n        merge_sort(L)\n        merge_sort(R)\n        i = j = k = 0\n        while i < len(L) and j < len(R):\n            if L[i] < R[j]:\n                arr[k] = L[i]\n                i += 1\n            else:\n                arr[k] = R[j]\n                j += 1\n            k += 1\n        while i < len(L):\n            arr[k] = L[i]\n            i += 1\n            k += 1\n        while j < len(R):\n            arr[k] = R[j]\n            j += 1\n            k += 1",
+      "tags": [
+        "algorithm",
+        "merge sort",
+        "sort"
+      ]
+    },
+    {
+      "description": "Bubble Sort: Sort an array by repeatedly swapping adjacent elements if they are in the wrong order.",
+      "code": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]",
+      "tags": [
+        "algorithm",
+        "bubble sort",
+        "sort"
+      ]
+    },
+    {
+      "description": "Depth-First Search (DFS): Traverse a graph by exploring as far as possible along each branch before backtracking.",
+      "code": "def dfs(graph, start, visited=None):\n    if visited is None:\n        visited = set()\n    visited.add(start)\n    print(start)\n    for next in graph[start] - visited:\n        dfs(graph, next, visited)\n    return visited",
+      "tags": [
+        "algorithm",
+        "dfs",
+        "graph",
+        "traversal"
+      ]
+    },
+    {
+      "description": "Breadth-First Search (BFS): Traverse a graph level by level, exploring all of the neighbor nodes at the present depth before moving on to nodes at the next depth level.",
+      "code": "from collections import deque\n\ndef bfs(graph, start):\n    visited, queue = set(), deque([start])\n    while queue:\n        vertex = queue.popleft()\n        if vertex not in visited:\n            visited.add(vertex)\n            queue.extend(graph[vertex] - visited)\n    return visited",
+      "tags": [
+        "algorithm",
+        "bfs",
+        "graph",
+        "traversal"
+      ]
+    },
+    {
+      "description": "Heap Sort: Sort an array by building a max heap and then repeatedly extracting the maximum element.",
+      "code": "def heapify(arr, n, i):\n    largest = i\n    l = 2 * i + 1\n    r = 2 * i + 2\n    if l < n and arr[i] < arr[l]:\n        largest = l\n    if r < n and arr[largest] < arr[r]:\n        largest = r\n    if largest != i:\n        arr[i], arr[largest] = arr[largest], arr[i]\n        heapify(arr, n, largest)\n\ndef heap_sort(arr):\n    n = len(arr)\n    for i in range(n // 2 - 1, -1, -1):\n        heapify(arr, n, i)\n    for i in range(n-1, 0, -1):\n        arr[i], arr[0] = arr[0], arr[i]\n        heapify(arr, i, 0)",
+      "tags": [
+        "algorithm",
+        "heap sort",
+        "sort"
+      ]
+    },
+    {
+      "description": "Counting Sort: Sort an array by counting the number of occurrences of each unique value.",
+      "code": "def counting_sort(arr):\n    max_val = max(arr)\n    m = max_val + 1\n    count = [0] * m\n    for a in arr:\n        count[a] += 1\n    i = 0\n    for a in range(m):\n        for c in range(count[a]):\n            arr[i] = a\n            i += 1\n    return arr",
+      "tags": [
+        "algorithm",
+        "counting sort",
+        "sort"
+      ]
+    },
+    {
+      "description": "Reading a file line by line",
+      "code": "with open('file.txt', 'r') as file:\n    for line in file:\n        print(line.strip())",
+      "tags": [
+        "file I/O",
+        "read file",
+        "python"
+      ]
+    },
+    {
+      "description": "Writing to a file",
+      "code": "with open('output.txt', 'w') as file:\n    file.write('Hello, World!')",
+      "tags": [
+        "file I/O",
+        "write file",
+        "python"
+      ]
+    },
+    {
+      "description": "Creating a list comprehension",
+      "code": "squares = [x * x for x in range(10)]",
+      "tags": [
+        "list comprehension",
+        "python"
+      ]
+    },
+    {
+      "description": "Creating a dictionary comprehension",
+      "code": "square_dict = {x: x * x for x in range(5)}",
+      "tags": [
+        "dictionary comprehension",
+        "python"
+      ]
+    },
+    {
+      "description": "Creating a set comprehension",
+      "code": "squares_set = {x * x for x in range(5)}",
+      "tags": [
+        "set comprehension",
+        "python"
+      ]
+    },
+    {
+      "description": "Creating a generator expression",
+      "code": "squares_gen = (x * x for x in range(10))",
+      "tags": [
+        "generator expression",
+        "python"
+      ]
+    },
+    {
+      "description": "Zipping two lists together",
+      "code": "names = ['Alice', 'Bob', 'Charlie']\nages = [24, 50, 18]\npeople = dict(zip(names, ages))",
+      "tags": [
+        "zip",
+        "python"
+      ]
+    },
+    {
+      "description": "Unpacking a sequence into variables",
+      "code": "data = ('Alice', 24, 'Engineer')\nname, age, profession = data",
+      "tags": [
+        "unpacking",
+        "python"
+      ]
+    },
+    {
+      "description": "Using a function with *args and **kwargs",
+      "code": "def function_with_args(*args, **kwargs):\n    print('Args:', args)\n    print('Kwargs:', kwargs)",
+      "tags": [
+        "args",
+        "kwargs",
+        "python"
+      ]
+    },
+    {
+      "description": "Using map function to apply a function to all items in a list",
+      "code": "def square(x):\n    return x * x\nnumbers = [1, 2, 3, 4, 5]\nsquared_numbers = list(map(square, numbers))",
+      "tags": [
+        "map",
+        "python"
+      ]
+    },
+    {
+      "description": "Filtering items in a list",
+      "code": "numbers = [1, 2, 3, 4, 5, 6]\neven_numbers = list(filter(lambda x: x % 2 == 0, numbers))",
+      "tags": [
+        "filter",
+        "lambda",
+        "python"
+      ]
+    },
+    {
+      "description": "Using enumerate to get index and value in a loop",
+      "code": "names = ['Alice', 'Bob', 'Charlie']\nfor index, name in enumerate(names):\n    print(f'Index {index}: {name}')",
+      "tags": [
+        "enumerate",
+        "loop",
+        "python"
+      ]
+    },
+    {
+      "description": "Try-except block for exception handling",
+      "code": "try:\n    x = 1 / 0\nexcept ZeroDivisionError as e:\n    print('Error:', e)",
+      "tags": [
+        "exception handling",
+        "try except",
+        "python"
+      ]
+    },
+    {
+      "description": "Using the reduce function from functools",
+      "code": "from functools import reduce\nnumbers = [1, 2, 3, 4, 5]\nsum_all = reduce(lambda x, y: x + y, numbers)",
+      "tags": [
+        "reduce",
+        "functools",
+        "python"
+      ]
+    },
+    {
+      "description": "List slicing to reverse a list",
+      "code": "numbers = [1, 2, 3, 4, 5]\nreversed_numbers = numbers[::-1]",
+      "tags": [
+        "list slicing",
+        "reverse",
+        "python"
+      ]
+    },
+    {
+      "description": "Using itertools.chain to flatten a list of lists",
+      "code": "import itertools\nlist_of_lists = [[1, 2], [3, 4], [5, 6]]\nflattened_list = list(itertools.chain(*list_of_lists))",
+      "tags": [
+        "itertools",
+        "chain",
+        "flatten",
+        "python"
+      ]
+    },
+    {
+      "description": "Using the any function to check if any element in a list is True",
+      "code": "values = [False, False, True]\nif any(values):\n    print('At least one True value exists.')",
+      "tags": [
+        "any",
+        "python"
+      ]
+    },
+    {
+      "description": "Using the all function to check if all elements in a list are True",
+      "code": "values = [True, True, True]\nif all(values):\n    print('All values are True.')",
+      "tags": [
+        "all",
+        "python"
+      ]
+    },
+    {
+      "description": "Using collections.Counter to count occurrences in a list",
+      "code": "from collections import Counter\nwords = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']\nword_counts = Counter(words)",
+      "tags": [
+        "collections",
+        "Counter",
+        "count occurrences",
+        "python"
+      ]
+    },
+    {
+      "description": "Using a lambda function to sort a list of tuples by the second item",
+      "code": "pairs = [(1, 'one'), (3, 'three'), (2, 'two')]\nsorted_pairs = sorted(pairs, key=lambda pair: pair[1])",
+      "tags": [
+        "lambda",
+        "sort",
+        "tuples",
+        "python"
+      ]
+    },
+    {
+      "description": "Sort a list using the bubble sort algorithm.",
+      "code": "def bubble_sort(arr):\\n    n = len(arr)\\n    for i in range(n):\\n        for j in range(0, n-i-1):\\n            if arr[j] > arr[j+1]:\\n                arr[j], arr[j+1] = arr[j+1], arr[j]",
+      "tags": [
+        "python",
+        "sorting",
+        "bubble sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the selection sort algorithm.",
+      "code": "def selection_sort(arr):\\n    for i in range(len(arr)):\\n        min_idx = i\\n        for j in range(i+1, len(arr)):\\n            if arr[min_idx] > arr[j]:\\n                min_idx = j\\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]",
+      "tags": [
+        "python",
+        "sorting",
+        "selection sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the insertion sort algorithm.",
+      "code": "def insertion_sort(arr):\\n    for i in range(1, len(arr)):\\n        key = arr[i]\\n        j = i-1\\n        while j >=0 and key < arr[j]:\\n            arr[j + 1] = arr[j]\\n            j -= 1\\n        arr[j + 1] = key",
+      "tags": [
+        "python",
+        "sorting",
+        "insertion sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the merge sort algorithm.",
+      "code": "def merge_sort(arr):\\n    if len(arr) > 1:\\n        mid = len(arr)//2\\n        L = arr[:mid]\\n        R = arr[mid:]\\n        merge_sort(L)\\n        merge_sort(R)\\n        i = j = k = 0\\n        while i < len(L) and j < len(R):\\n            if L[i] < R[j]:\\n                arr[k] = L[i]\\n                i += 1\\n            else:\\n                arr[k] = R[j]\\n                j += 1\\n            k += 1\\n        while i < len(L):\\n            arr[k] = L[i]\\n            i += 1\\n            k += 1\\n        while j < len(R):\\n            arr[k] = R[j]\\n            j += 1\\n            k += 1",
+      "tags": [
+        "python",
+        "sorting",
+        "merge sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the quick sort algorithm.",
+      "code": "def quick_sort(arr):\\n    if len(arr) <= 1:\\n        return arr\\n    pivot = arr[len(arr) // 2]\\n    left = [x for x in arr if x < pivot]\\n    middle = [x for x in arr if x == pivot]\\n    right = [x for x in arr if x > pivot]\\n    return quick_sort(left) + middle + quick_sort(right)",
+      "tags": [
+        "python",
+        "sorting",
+        "quick sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the heap sort algorithm.",
+      "code": "def heap_sort(arr):\\n    def heapify(arr, n, i):\\n        largest = i\\n        l = 2 * i + 1\\n        r = 2 * i + 2\\n        if l < n and arr[l] > arr[largest]:\\n            largest = l\\n        if r < n and arr[r] > arr[largest]:\\n            largest = r\\n        if largest != i:\\n            arr[i], arr[largest] = arr[largest], arr[i]\\n            heapify(arr, n, largest)\\n    n = len(arr)\\n    for i in range(n, -1, -1):\\n        heapify(arr, n, i)\\n    for i in range(n-1, 0, -1):\\n        arr[i], arr[0] = arr[0], arr[i]\\n        heapify(arr, i, 0)",
+      "tags": [
+        "python",
+        "sorting",
+        "heap sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the shell sort algorithm.",
+      "code": "def shell_sort(arr):\\n    n = len(arr)\\n    gap = n//2\\n    while gap > 0:\\n        for i in range(gap, n):\\n            temp = arr[i]\\n            j = i\\n            while  j >= gap and arr[j - gap] > temp:\\n                arr[j] = arr[j - gap]\\n                j -= gap\\n            arr[j] = temp\\n        gap //= 2",
+      "tags": [
+        "python",
+        "sorting",
+        "shell sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the counting sort algorithm.",
+      "code": "def counting_sort(arr, max_value):\\n    m = max_value + 1\\n    count = [0] * m\\n    for a in arr:\\n        count[a] += 1\\n    i = 0\\n    for a in range(m):\\n        for c in range(count[a]):\\n            arr[i] = a\\n            i += 1\\n    return arr",
+      "tags": [
+        "python",
+        "sorting",
+        "counting sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the radix sort algorithm.",
+      "code": "def radix_sort(arr):\\n    RADIX = 10\\n    maxLength = False\\n    tmp , placement = -1, 1\\n    while not maxLength:\\n        maxLength = True\\n        buckets = [list() for _ in range(RADIX)]\\n        for i in arr:\\n            tmp = i // placement\\n            buckets[tmp % RADIX].append(i)\\n            if maxLength and tmp > 0:\\n                maxLength = False\\n        a = 0\\n        for b in range(RADIX):\\n            buck = buckets[b]\\n            for i in buck:\\n                arr[a] = i\\n                a += 1\\n        placement *= RADIX",
+      "tags": [
+        "python",
+        "sorting",
+        "radix sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the bucket sort algorithm.",
+      "code": "def bucket_sort(arr):\\n    bucket = []\\n    for i in range(len(arr)):\\n        bucket.append([])\\n    for j in arr:\\n        index_b = int(10 * j)\\n        bucket[index_b].append(j)\\n    for i in range(len(arr)):\\n        bucket[i] = sorted(bucket[i])\\n    k = 0\\n    for i in range(len(arr)):\\n        for j in range(len(bucket[i])):\\n            arr[k] = bucket[i][j]\\n            k += 1\\n    return arr",
+      "tags": [
+        "python",
+        "sorting",
+        "bucket sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the cocktail sort algorithm.",
+      "code": "def cocktail_sort(arr):\\n    n = len(arr)\\n    swapped = True\\n    start = 0\\n    end = n-1\\n    while (swapped==True):\\n        swapped = False\\n        for i in range (start, end):\\n            if (arr[i] > arr[i+1]) :\\n                arr[i], arr[i+1]= arr[i+1], arr[i]\\n                swapped=True\\n        if (swapped==False):\\n            break\\n        swapped = False\\n        end = end-1\\n        for i in range(end-1, start-1,-1):\\n            if (arr[i] > arr[i+1]):\\n                arr[i], arr[i+1] = arr[i+1], arr[i]\\n                swapped = True\\n        start = start+1",
+      "tags": [
+        "python",
+        "sorting",
+        "cocktail sort"
+      ]
+    },
+    {
+      "description": "Sort a list using the gnome sort algorithm.",
+      "code": "def gnome_sort(arr):\\n    n = len(arr)\\n    index = 0\\n    while index < n:\\n        if index == 0:\\n            index = index + 1\\n        if arr[index] >= arr[index - 1]:\\n            index = index + 1\\n        else:\\n            arr[index], arr[index-1] = arr[index-1], arr[index]\\n            index = index - 1",
+      "tags": [
+        "python",
+        "sorting",
+        "gnome sort"
+      ]
+    },
+    {
+      "description": "Implement Dijkstra's algorithm to find the shortest path in a graph.",
+      "code": "import heapq\\ndef dijkstra(graph, start):\\n    distances = {vertex: float('infinity') for vertex in graph}\\n    distances[start] = 0\\n    priority_queue = [(0, start)]\\n    while priority_queue:\\n        current_distance, current_vertex = heapq.heappop(priority_queue)\\n        for neighbor, weight in graph[current_vertex].items():\\n            distance = current_distance + weight\\n            if distance < distances[neighbor]:\\n                distances[neighbor] = distance\\n                heapq.heappush(priority_queue, (distance, neighbor))\\n    return distances",
+      "tags": [
+        "python",
+        "graph",
+        "dijkstra"
+      ]
+    },
+    {
+      "description": "Depth-first search algorithm for graphs.",
+      "code": "def dfs(graph, start, visited=None):\\n    if visited is None:\\n        visited = set()\\n    visited.add(start)\\n    for next in graph[start] - visited:\\n        dfs(graph, next, visited)\\n    return visited",
+      "tags": [
+        "python",
+        "graph",
+        "depth-first search",
+        "dfs"
+      ]
+    },
+    {
+      "description": "Breadth-first search algorithm for graphs.",
+      "code": "from collections import deque\\ndef bfs(graph, start):\\n    visited, queue = set(), deque([start])\\n    while queue:\\n        vertex = queue.popleft()\\n        if vertex not in visited:\\n            visited.add(vertex)\\n            queue.extend(graph[vertex] - visited)\\n    return visited",
+      "tags": [
+        "python",
+        "graph",
+        "breadth-first search",
+        "bfs"
+      ]
+    },
+    {
+      "description": "Find all possible paths between two nodes in a graph using backtracking.",
+      "code": "def find_all_paths(graph, start, end, path=[]):\\n    path = path + [start]\\n    if start == end:\\n        return [path]\\n    paths = []\\n    for node in graph[start]:\\n        if node not in path:\\n            newpaths = find_all_paths(graph, node, end, path)\\n            for newpath in newpaths:\\n                paths.append(newpath)\\n    return paths",
+      "tags": [
+        "python",
+        "graph",
+        "all paths",
+        "backtracking"
+      ]
+    },
+    {
+      "description": "Implement Kruskal's algorithm to find the minimum spanning tree of a graph.",
+      "code": "class DisjointSet:\\n    def __init__(self, vertices):\\n        self.vertices = vertices\\n        self.parent = {}\\n        for v in vertices:\\n            self.parent[v] = v\\n    def find(self, item):\\n        if self.parent[item] == item:\\n            return item\\n        else:\\n            return self.find(self.parent[item])\\n    def union(self, set1, set2):\\n        root1 = self.find(set1)\\n        root2 = self.find(set2)\\n        self.parent[root1] = root2\\ndef kruskal(graph):\\n    edges = [(weight, start, end) for start, adj in graph.items() for end, weight in adj.items()]\\n    edges.sort()\\n    tree = []\\n    ds = DisjointSet(set(graph))\\n    for weight, start, end in edges:\\n        if ds.find(start) != ds.find(end):\\n            tree.append((start, end, weight))\\n            ds.union(start, end)\\n    return tree",
+      "tags": [
+        "python",
+        "graph",
+        "kruskal",
+        "minimum spanning tree"
+      ]
+    },
+    {
+      "description": "Find the minimum spanning tree using Prim's algorithm.",
+      "code": "import heapq\\ndef prim(graph, start):\\n    visited = set([start])\\n    edges = list(graph[start])\\n    heapq.heapify(edges)\\n    min_span_tree = []\\n    while edges:\\n        weight, start, end = heapq.heappop(edges)\\n        if end not in visited:\\n            visited.add(end)\\n            min_span_tree.append((start, end, weight))\\n            for next_edge in graph[end]:\\n                if next_edge[2] not in visited:\\n                    heapq.heappush(edges, next_edge)\\n    return min_span_tree",
+      "tags": [
+        "python",
+        "graph",
+        "prim",
+        "minimum spanning tree"
+      ]
+    },
+    {
+      "description": "Detect cycles in a graph using Tarjan's algorithm.",
+      "code": "def tarjan(graph):\\n    stack, low, ids, on_stack = [], {}, {}, {}\\n    global_index = 0\\n    def dfs(at):\\n        nonlocal global_index\\n        low[at] = ids[at] = global_index\\n        global_index += 1\\n        stack.append(at)\\n        on_stack[at] = True\\n        for to in graph[at]:\\n            if to not in ids:\\n                dfs(to)\\n                low[at] = min(low[at], low[to])\\n            elif on_stack[to]:\\n                low[at] = min(low[at], ids[to])\\n        if ids[at] == low[at]:\\n            while stack[-1] != at:\\n                on_stack[stack.pop()] = False\\n    for at in graph:\\n        if at not in ids:\\n            dfs(at)\\n    return low",
+      "tags": [
+        "python",
+        "graph",
+        "tarjan",
+        "cycle detection"
+      ]
+    },
+    {
+      "description": "Topological sorting using Kahn's algorithm.",
+      "code": "from collections import deque\\ndef kahn_topological_sort(graph):\\n    in_degree = {u: 0 for u in graph} # Initialize all in-degrees to 0\\n    for u in graph:\\n        for v in graph[u]:\\n            in_degree[v] += 1\\n    queue = deque()\\n    for u in in_degree:\\n        if in_degree[u] == 0:\\n            queue.appendleft(u)\\n    l = []\\n    while queue:\\n        u = queue.pop()\\n        l.append(u)\\n        for v in graph[u]:\\n            in_degree[v] -= 1\\n            if in_degree[v] == 0:\\n                queue.appendleft(v)\\n    return l",
+      "tags": [
+        "python",
+        "graph",
+        "kahn",
+        "topological sort"
+      ]
+    },
+    {
+      "description": "Topological sorting using DFS.",
+      "code": "def topological_sort_dfs(graph):\\n    visited = set()\\n    stack = []\\n    def dfs(vertex):\\n        visited.add(vertex)\\n        for neighbor in graph[vertex]:\\n            if neighbor not in visited:\\n                dfs(neighbor)\\n        stack.append(vertex)\\n    for vertex in graph:\\n        if vertex not in visited:\\n            dfs(vertex)\\n    return stack[::-1]",
+      "tags": [
+        "python",
+        "graph",
+        "dfs",
+        "topological sort"
+      ]
+    },
+    {
+      "description": "Find all strongly connected components using Kosaraju's algorithm.",
+      "code": "def kosaraju(graph):\\n    stack = []\\n    visited = set()\\n    def fill_order(v):\\n        visited.add(v)\\n        for neighbour in graph[v]:\\n            if neighbour not in visited:\\n                fill_order(neighbour)\\n        stack.append(v)\\n    def dfs(v, transpose_graph, visited):\\n        visited.add(v)\\n        for neighbour in transpose_graph[v]:\\n            if neighbour not in visited:\\n                dfs(neighbour, transpose_graph, visited)\\n    for v in graph:\\n        if v not in visited:\\n            fill_order(v)\\n    transpose_graph = {}\\n    for v in graph:\\n        transpose_graph[v] = []\\n    for v in graph:\\n        for neighbour in graph[v]:\\n            transpose_graph[neighbour].append(v)\\n    visited.clear()\\n    scc = []\\n    while stack:\\n        v = stack.pop()\\n        if v not in visited:\\n            scc_group = set()\\n            dfs(v, transpose_graph, scc_group)\\n            scc.append(scc_group)\\n    return scc",
+      "tags": [
+        "python",
+        "graph",
+        "kosaraju",
+        "strongly connected components"
+      ]
+    },
+    {
+      "description": "Bellman-Ford algorithm to find shortest paths from a single source.",
+      "code": "def bellman_ford(graph, source):\\n    distance = {vertex: float('infinity') for vertex in graph}\\n    distance[source] = 0\\n    for _ in range(len(graph) - 1):\\n        for vertex in graph:\\n            for neighbour, weight in graph[vertex].items():\\n                if distance[vertex] + weight < distance[neighbour]:\\n                    distance[neighbour] = distance[vertex] + weight\\n    for vertex in graph:\\n        for neighbour, weight in graph[vertex].items():\\n            if distance[vertex] + weight < distance[neighbour]:\\n                return None # Negative cycle found\\n    return distance",
+      "tags": [
+        "python",
+        "graph",
+        "bellman-ford"
+      ]
+    },
+    {
+      "description": "Levenshtein Distance (Edit Distance)",
+      "code": "def levenshtein_distance(s1, s2):\n    if len(s1) < len(s2):\n        return levenshtein_distance(s2, s1)\n    if len(s2) == 0:\n        return len(s1)\n    previous_row = range(len(s2) + 1)\n    for i, c1 in enumerate(s1):\n        current_row = [i + 1]\n        for j, c2 in enumerate(s2):\n            insertions = previous_row[j + 1] + 1\n            deletions = current_row[j] + 1\n            substitutions = previous_row[j] + (c1 != c2)\n            current_row.append(min(insertions, deletions, substitutions))\n        previous_row = current_row\n    return previous_row[-1]",
+      "tags": [
+        "string",
+        "algorithm",
+        "edit distance"
+      ]
+    },
+    {
+      "description": "Knuth-Morris-Pratt (KMP) String Matching",
+      "code": "def build_failure_function(pattern):\n    failure = [0] * len(pattern)\n    j = 0\n    for i in range(1, len(pattern)):\n        while j > 0 and pattern[i] != pattern[j]:\n            j = failure[j - 1]\n        if pattern[i] == pattern[j]:\n            j += 1\n        failure[i] = j\n    return failure\n\ndef kmp_search(text, pattern):\n    failure = build_failure_function(pattern)\n    j = 0\n    for i in range(len(text)):\n        while j > 0 and text[i] != pattern[j]:\n            j = failure[j - 1]\n        if text[i] == pattern[j]:\n            j += 1\n        if j == len(pattern):\n            return i - j + 1\n    return -1",
+      "tags": [
+        "string",
+        "algorithm",
+        "substring",
+        "pattern matching"
+      ]
+    },
+    {
+      "description": "Boyer-Moore String Searching Algorithm",
+      "code": "def boyer_moore(text, pattern):\n    def build_bad_character_table(pattern):\n        table = dict()\n        for i in range(len(pattern) - 1, -1, -1):\n            if pattern[i] not in table:\n                table[pattern[i]] = len(pattern) - 1 - i\n        return table\n    \n    def build_good_suffix_table(pattern):\n        n = len(pattern)\n        suffixes = [0] * n\n        j = n - 1\n        k = n\n        for i in range(n - 2, -1, -1):\n            if i > j and suffixes[i + n - 1 - k] < i - j:\n                suffixes[i] = suffixes[i + n - 1 - k]\n            else:\n                if i < j:\n                    j = i\n                k = min(k, i)\n                while j >= 0 and pattern[j] == pattern[j + n - 1 - k]:\n                    j -= 1\n                suffixes[i] = k - j\n        return suffixes\n    \n    bad_char_table = build_bad_character_table(pattern)\n    good_suffix_table = build_good_suffix_table(pattern)\n    \n    i = 0\n    while i <= len(text) - len(pattern):\n        j = len(pattern) - 1\n        while j >= 0 and pattern[j] == text[i + j]:\n            j -= 1\n        if j < 0:\n            return i\n        else:\n            char_in_text = text[i + j]\n            char_in_pattern = pattern[j]\n            bad_char_skip = bad_char_table.get(char_in_text, len(pattern))\n            good_suffix_skip = good_suffix_table[j]\n            i += max(bad_char_skip, good_suffix_skip)\n    return -1",
+      "tags": [
+        "string",
+        "algorithm",
+        "substring",
+        "pattern matching"
+      ]
+    },
+    {
+      "description": "Rabin-Karp String Search Algorithm",
+      "code": "def rabin_karp_search(text, pattern, prime=101):\n    n = len(text)\n    m = len(pattern)\n    p = 0  # Hash value for pattern\n    t = 0  # Hash value for current window in text\n    h = 1  # Multiplicative factor\n    result = []\n    \n    # Calculate h\n    for i in range(m - 1):\n        h = (h * 256) % prime\n    \n    # Calculate hash values for pattern and first window in text\n    for i in range(m):\n        p = (256 * p + ord(pattern[i])) % prime\n        t = (256 * t + ord(text[i])) % prime\n    \n    # Slide the pattern over text one by one\n    for i in range(n - m + 1):\n        # Check if the hash values match\n        if p == t:\n            match = True\n            for j in range(m):\n                if pattern[j] != text[i + j]:\n                    match = False\n                    break\n            if match:\n                result.append(i)\n        # Calculate hash value for next window in text\n        if i < n - m:\n            t = (256 * (t - ord(text[i]) * h) + ord(text[i + m])) % prime\n            if t < 0:\n                t += prime\n    return result",
+      "tags": [
+        "string",
+        "algorithm",
+        "substring",
+        "pattern matching"
+      ]
+    },
+    {
+      "description": "Aho-Corasick String Matching Algorithm",
+      "code": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.is_end_of_word = False\n        self.failure_link = None\n        self.output_link = []\n\n\nclass AhoCorasick:\n    def __init__(self):\n        self.root = TrieNode()\n\n    def add_pattern(self, pattern):\n        node = self.root\n        for char in pattern:\n            if char not in node.children:\n                node.children[char] = TrieNode()\n            node = node.children[char]\n        node.is_end_of_word = True\n\n    def build_failure_links(self):\n        queue = []\n        for char, child in self.root.children.items():\n            child.failure_link = self.root\n            queue.append(child)\n\n        while queue:\n            current_node = queue.pop(0)\n            for char, child in current_node.children.items():\n                queue.append(child)\n                failure_node = current_node.failure_link\n                while failure_node and char not in failure_node.children:\n                    failure_node = failure_node.failure_link\n                child.failure_link = failure_node.children[char] if failure_node else self.root\n                if child.failure_link.is_end_of_word:\n                    child.output_link.append(child.failure_link)\n                    child.output_link.extend(child.failure_link.output_link)\n\n    def search(self, text):\n        results = {}\n        node = self.root\n        for i, char in enumerate(text):\n            while node and char not in node.children:\n                node = node.failure_link\n            if not node:\n                node = self.root\n                continue\n            node = node.children[char]\n            if node.is_end_of_word:\n                for pattern_node in node.output_link:\n                    pattern = text[i - len(pattern_node) + 1:i + 1]\n                    if pattern_node.is_end_of_word:\n                        if pattern not in results:\n                            results[pattern] = [i - len(pattern) + 1]\n                        else:\n                            results[pattern].append(i - len(pattern) + 1)\n        return results",
+      "tags": [
+        "string",
+        "algorithm",
+        "substring",
+        "pattern matching"
+      ]
+    },
+    {
+      "description": "Longest Common Substring",
+      "code": "def longest_common_substring(s1, s2):\n    m = len(s1)\n    n = len(s2)\n    length = 0  # Length of the longest common substring\n    ending_index = 0  # Ending index of the longest common substring\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    \n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if s1[i - 1] == s2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1] + 1\n                if dp[i][j] > length:\n                    length = dp[i][j]\n                    ending_index = i - 1\n    \n    common_substring = s1[ending_index - length + 1:ending_index + 1]\n    return common_substring",
+      "tags": [
+        "string",
+        "algorithm",
+        "substring"
+      ]
+    },
+    {
+      "description": "Z Algorithm (String Pattern Matching)",
+      "code": "def z_algorithm(text):\n    n = len(text)\n    z = [0] * n\n    left = right = 0\n    for i in range(1, n):\n        if i <= right:\n            z[i] = min(right - i + 1, z[i - left])\n        while i + z[i] < n and text[z[i]] == text[i + z[i]]:\n            z[i] += 1\n        if i + z[i] - 1 > right:\n            left, right = i, i + z[i] - 1\n    return z",
+      "tags": [
+        "string",
+        "algorithm",
+        "substring",
+        "pattern matching"
+      ]
+    },
+    {
+      "description": "Manacher's Algorithm (Longest Palindromic Substring)",
+      "code": "def manacher(text):\n    # Preprocess the input text\n    processed_text = '#'.join('^{}$'.format(text))\n    n = len(processed_text)\n    p = [0] * n\n    c = r = 0  # Center and right boundary of the rightmost palindrome\n    \n    for i in range(1, n - 1):\n        mirr = 2 * c - i  # Mirror of i with respect to the center\n        if i < r:\n            p[i] = min(r - i, p[mirr])\n        # Attempt to expand palindrome centered at i\n        while processed_text[i + p[i] + 1] == processed_text[i - p[i] - 1]:\n            p[i] += 1\n        # If palindrome centered at i expands past r,\n        # adjust center and right boundary\n        if i + p[i] > r:\n            c, r = i, i + p[i]\n    \n    # Find the maximum element in p\n    max_len = max(p)\n    # Find the index of the maximum element\n    center_index = p.index(max_len)\n    # Extract and return the longest palindromic substring\n    start = (center_index - max_len) // 2\n    end = start + max_len\n    return text[start:end]",
+      "tags": [
+        "string",
+        "algorithm",
+        "substring",
+        "palindrome"
+      ]
+    },
+    {
+      "description": "Rabin-Miller Primality Test (String Miller-Rabin)",
+      "code": "import random\n\n# Miller-Rabin primality test\n\ndef is_prime(n, k=5):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0:\n        return False\n    r, d = 0, n - 1\n    while d % 2 == 0:\n        r += 1\n        d //= 2\n    \n    def miller_rabin_witness(a, n):\n        x = pow(a, d, n)\n        if x == 1 or x == n - 1:\n            return True\n        for _ in range(r - 1):\n            x = pow(x, 2, n)\n            if x == n - 1:\n                return True\n        return False\n    \n    for _ in range(k):\n        a = random.randint(2, n - 2)\n        if not miller_rabin_witness(a, n):\n            return False\n    return True",
+      "tags": [
+        "string",
+        "algorithm",
+        "primality test",
+        "Miller-Rabin"
+      ]
+    },
+    {
+      "description": "Boolean Retrieval Model",
+      "code": "def boolean_retrieval(query, index):\n    result = []\n    for term in query:\n        if term in index:\n            result.append(index[term])\n        else:\n            result.append([])\n    return intersect(result)",
+      "tags": [
+        "information retrieval",
+        "boolean model",
+        "query processing"
+      ]
+    },
+    {
+      "description": "Vector Space Model (VSM)",
+      "code": "from sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.metrics.pairwise import cosine_similarity\n\ndef calculate_cosine_similarity(query, documents):\n    vectorizer = TfidfVectorizer()\n    tfidf_matrix = vectorizer.fit_transform(documents)\n    query_vector = vectorizer.transform([query])\n    similarity_scores = cosine_similarity(query_vector, tfidf_matrix)\n    return similarity_scores",
+      "tags": [
+        "information retrieval",
+        "vector space model",
+        "document ranking"
+      ]
+    },
+    {
+      "description": "Term Frequency-Inverse Document Frequency (TF-IDF)",
+      "code": "from sklearn.feature_extraction.text import TfidfVectorizer\n\ndocuments = ['document 1', 'document 2', 'document 3']\nvectorizer = TfidfVectorizer()\ntfidf_matrix = vectorizer.fit_transform(documents)",
+      "tags": [
+        "information retrieval",
+        "tf-idf",
+        "term weighting"
+      ]
+    },
+    {
+      "description": "Okapi BM25 Algorithm",
+      "code": "from math import log\n\ndef bm25_score(query_term, document, doc_length, avg_doc_length, k1=1.5, b=0.75):\n    tf = document.count(query_term)\n    idf = log((len(corpus) - df + 0.5) / (df + 0.5) + 1)\n    numerator = tf * (k1 + 1)\n    denominator = tf + k1 * (1 - b + b * (doc_length / avg_doc_length))\n    return idf * (numerator / denominator)",
+      "tags": [
+        "information retrieval",
+        "BM25",
+        "ranking function"
+      ]
+    },
+    {
+      "description": "Latent Semantic Indexing (LSI)",
+      "code": "from sklearn.decomposition import TruncatedSVD\nfrom sklearn.feature_extraction.text import TfidfVectorizer\n\ndef lsi(query, documents, num_topics=10):\n    vectorizer = TfidfVectorizer()\n    tfidf_matrix = vectorizer.fit_transform(documents)\n    svd = TruncatedSVD(n_components=num_topics)\n    lsi_matrix = svd.fit_transform(tfidf_matrix)\n    query_vector = vectorizer.transform([query])\n    query_lsi = svd.transform(query_vector)\n    return cosine_similarity(query_lsi, lsi_matrix)",
+      "tags": [
+        "information retrieval",
+        "LSI",
+        "dimensionality reduction"
+      ]
+    },
+    {
+      "description": "PageRank Algorithm",
+      "code": "import networkx as nx\n\nG = nx.DiGraph()\nG.add_edges_from([(1, 2), (2, 3), (3, 1)])\npage_rank = nx.pagerank(G, alpha=0.85)",
+      "tags": [
+        "information retrieval",
+        "PageRank",
+        "web search"
+      ]
+    },
+    {
+      "description": "HITS Algorithm (Hypertext Induced Topic Selection)",
+      "code": "import networkx as nx\n\nG = nx.DiGraph()\nG.add_edges_from([(1, 2), (2, 3), (3, 1)])\nhubs, authorities = nx.hits(G)\n",
+      "tags": [
+        "information retrieval",
+        "HITS",
+        "link analysis"
+      ]
+    },
+    {
+      "description": "Cosine Similarity",
+      "code": "from sklearn.metrics.pairwise import cosine_similarity\n\nvector1 = [1, 2, 3]\nvector2 = [4, 5, 6]\nsimilarity_score = cosine_similarity([vector1], [vector2])",
+      "tags": [
+        "information retrieval",
+        "cosine similarity",
+        "similarity measure"
+      ]
+    },
+    {
+      "description": "Inverted Index",
+      "code": "from collections import defaultdict\n\ninverted_index = defaultdict(list)\ndocuments = ['doc1', 'doc2', 'doc3']\n\nfor doc_id, doc_text in enumerate(documents):\n    for term in doc_text.split():\n        inverted_index[term].append(doc_id)",
+      "tags": [
+        "information retrieval",
+        "inverted index",
+        "indexing"
+      ]
+    },
+    {
+      "description": "Term Frequency (TF)",
+      "code": "def calculate_tf(term, document):\n    term_count = document.count(term)\n    return term_count / len(document.split())",
+      "tags": [
+        "information retrieval",
+        "term frequency",
+        "text analysis"
+      ]
+    },
+    {
+      "description": "Radix Sort Algorithm",
+      "code": "def radix_sort(arr):\n    max_digit = len(str(max(arr)))\n    for digit in range(max_digit):\n        buckets = [[] for _ in range(10)]\n        for num in arr:\n            digit_value = (num // 10**digit) % 10\n            buckets[digit_value].append(num)\n        arr = [num for bucket in buckets for num in bucket]\n    return arr",
+      "tags": [
+        "string algorithms",
+        "sorting",
+        "radix sort"
+      ]
+    },
+    {
+      "description": "Knuth-Morris-Pratt (KMP) Algorithm for Substring Search",
+      "code": "def kmp_search(text, pattern):\n    m, n = len(pattern), len(text)\n    lps = compute_lps(pattern)\n    i = j = 0\n    while i < n:\n        if pattern[j] == text[i]:\n            i += 1\n            j += 1\n            if j == m:\n                return i - j\n        else:\n            if j != 0:\n                j = lps[j - 1]\n            else:\n                i += 1\n    return -1\n\n# Helper function to compute Longest Prefix Suffix (LPS) array\ndef compute_lps(pattern):\n    m = len(pattern)\n    lps = [0] * m\n    length = 0\n    i = 1\n    while i < m:\n        if pattern[i] == pattern[length]:\n            length += 1\n            lps[i] = length\n            i += 1\n        else:\n            if length != 0:\n                length = lps[length - 1]\n            else:\n                lps[i] = 0\n                i += 1\n    return lps",
+      "tags": [
+        "string algorithms",
+        "substring search",
+        "KMP algorithm"
+      ]
+    },
+    {
+      "description": "Trie Data Structure",
+      "code": "class TrieNode:\n    def __init__(self):\n        self.children = [None] * 26\n        self.is_end_of_word = False\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n\n    def insert(self, word):\n        node = self.root\n        for char in word:\n            index = ord(char) - ord('a')\n            if not node.children[index]:\n                node.children[index] = TrieNode()\n            node = node.children[index]\n        node.is_end_of_word = True\n\n    def search(self, word):\n        node = self.root\n        for char in word:\n            index = ord(char) - ord('a')\n            if not node.children[index]:\n                return False\n            node = node.children[index]\n        return node.is_end_of_word",
+      "tags": [
+        "string algorithms",
+        "tries",
+        "data structure"
+      ]
+    },
+    {
+      "description": "Regular Expression Matching",
+      "code": "import re\n\n# Using Python's built-in regular expression library\npattern = 'a.b'\ntext = 'axb'\nif re.match(pattern, text):\n    print('Match')\nelse:\n    print('No match')",
+      "tags": [
+        "string algorithms",
+        "regular expressions",
+        "pattern matching"
+      ]
+    },
+    {
+      "description": "Lempel-Ziv-Welch (LZW) Compression Algorithm",
+      "code": "def lzw_compress(data):\n    dictionary = {chr(i): i for i in range(256)}\n    result = []\n    w = ''\n    for c in data:\n        wc = w + c\n        if wc in dictionary:\n            w = wc\n        else:\n            result.append(dictionary[w])\n            dictionary[wc] = len(dictionary)\n            w = c\n    if w:\n        result.append(dictionary[w])\n    return result",
+      "tags": [
+        "string algorithms",
+        "data compression",
+        "LZW algorithm"
+      ]
+    },
+    {
+      "description": "Burrows-Wheeler Transform (BWT)",
+      "code": "def burrows_wheeler_transform(text):\n    rotations = [text[i:] + text[:i] for i in range(len(text))]\n    sorted_rotations = sorted(rotations)\n    bwt_text = ''.join(rot[-1] for rot in sorted_rotations)\n    return bwt_text",
+      "tags": [
+        "string algorithms",
+        "data compression",
+        "BWT"
+      ]
+    },
+    {
+      "description": "Huffman Coding",
+      "code": "import heapq\nfrom collections import defaultdict\n\ndef huffman_coding(data):\n    freq = defaultdict(int)\n    for char in data:\n        freq[char] += 1\n    heap = [[weight, [char, '']] for char, weight in freq.items()]\n    heapq.heapify(heap)\n    while len(heap) > 1:\n        lo = heapq.heappop(heap)\n        hi = heapq.heappop(heap)\n        for pair in lo[1:]:\n            pair[1] = '0' + pair[1]\n        for pair in hi[1:]:\n            pair[1] = '1' + pair[1]\n        heapq.heappush(heap, [lo[0] + hi[0]] + lo[1:] + hi[1:])\n    return heap[0][1:]",
+      "tags": [
+        "string algorithms",
+        "data compression",
+        "Huffman coding"
+      ]
+    },
+    {
+      "description": "Burrows-Wheeler Inverse Transform (BWT Inverse)",
+      "code": "def burrows_wheeler_inverse(bwt_text):\n    table = sorted(bwt_text)\n    index = [0] * len(bwt_text)\n    for i, char in enumerate(bwt_text):\n        index[i] = table.index(char)\n        table[index[i]] = None\n    result = [''] * len(bwt_text)\n    i = j = 0\n    while i < len(bwt_text):\n        result[i] = bwt_text[j]\n        i += 1\n        j = index[j]\n    return ''.join(result)",
+      "tags": [
+        "string algorithms",
+        "data compression",
+        "BWT Inverse"
+      ]
+    },
+    {
+      "description": "Run-Length Encoding (RLE)",
+      "code": "def run_length_encode(data):\n    encoded = []\n    i = 0\n    while i < len(data):\n        char = data[i]\n        count = 1\n        while i + 1 < len(data) and data[i + 1] == char:\n            count += 1\n            i += 1\n        encoded.append((char, count))\n        i += 1\n    return encoded",
+      "tags": [
+        "string algorithms",
+        "data compression",
+        "RLE"
+      ]
+    },
+    {
+      "description": "Arithmetic Coding",
+      "code": "def arithmetic_encode(data, freq_table):\n    # Implementation not shown for brevity\n    pass",
+      "tags": [
+        "string algorithms",
+        "data compression",
+        "arithmetic coding"
+      ]
+    },
+    {
+      "description": "Linear Regression",
+      "code": "from sklearn.linear_model import LinearRegression\n\n# Create a linear regression model\nmodel = LinearRegression()\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "machine learning",
+        "linear regression",
+        "regression"
+      ]
+    },
+    {
+      "description": "Logistic Regression",
+      "code": "from sklearn.linear_model import LogisticRegression\n\n# Create a logistic regression model\nmodel = LogisticRegression()\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "machine learning",
+        "logistic regression",
+        "classification"
+      ]
+    },
+    {
+      "description": "Decision Trees",
+      "code": "from sklearn.tree import DecisionTreeClassifier\n\n# Create a decision tree classifier\nmodel = DecisionTreeClassifier()\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "machine learning",
+        "decision trees",
+        "classification"
+      ]
+    },
+    {
+      "description": "Random Forests",
+      "code": "from sklearn.ensemble import RandomForestClassifier\n\n# Create a random forest classifier\nmodel = RandomForestClassifier()\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "machine learning",
+        "random forests",
+        "classification"
+      ]
+    },
+    {
+      "description": "Support Vector Machines (SVM)",
+      "code": "from sklearn.svm import SVC\n\n# Create an SVM classifier\nmodel = SVC()\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "machine learning",
+        "SVM",
+        "classification"
+      ]
+    },
+    {
+      "description": "K-Nearest Neighbors (KNN)",
+      "code": "from sklearn.neighbors import KNeighborsClassifier\n\n# Create a KNN classifier\nmodel = KNeighborsClassifier()\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "machine learning",
+        "KNN",
+        "classification"
+      ]
+    },
+    {
+      "description": "Naive Bayes",
+      "code": "from sklearn.naive_bayes import GaussianNB\n\n# Create a Gaussian Naive Bayes classifier\nmodel = GaussianNB()\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "machine learning",
+        "naive bayes",
+        "classification"
+      ]
+    },
+    {
+      "description": "K-Means Clustering",
+      "code": "from sklearn.cluster import KMeans\n\n# Create a K-Means clustering model\nmodel = KMeans(n_clusters=3)\n\n# Fit the model to the data\nmodel.fit(X)\n\n# Get cluster assignments\ncluster_labels = model.labels_",
+      "tags": [
+        "machine learning",
+        "K-Means",
+        "clustering"
+      ]
+    },
+    {
+      "description": "Principal Component Analysis (PCA)",
+      "code": "from sklearn.decomposition import PCA\n\n# Create a PCA model with desired number of components\nmodel = PCA(n_components=2)\n\n# Fit the model to the data\nmodel.fit(X)\n\n# Transform the data to the reduced dimensionality\nX_reduced = model.transform(X)",
+      "tags": [
+        "machine learning",
+        "PCA",
+        "dimensionality reduction"
+      ]
+    },
+    {
+      "description": "Gradient Boosting",
+      "code": "from sklearn.ensemble import GradientBoostingClassifier\n\n# Create a Gradient Boosting classifier\nmodel = GradientBoostingClassifier()\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "machine learning",
+        "gradient boosting",
+        "classification"
+      ]
+    },
+    {
+      "description": "Neural Networks (Deep Learning)",
+      "code": "import tensorflow as tf\nfrom tensorflow import keras\n\n# Create a neural network model using Keras\nmodel = keras.Sequential([\n    keras.layers.Dense(64, activation='relu', input_shape=(input_dim,)),\n    keras.layers.Dense(32, activation='relu'),\n    keras.layers.Dense(output_dim, activation='softmax')\n])\n\n# Compile the model\nmodel.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])\n\n# Train the model\nmodel.fit(X_train, y_train, epochs=10, batch_size=32)",
+      "tags": [
+        "machine learning",
+        "neural networks",
+        "deep learning"
+      ]
+    },
+    {
+      "description": "Hidden Markov Models (HMM)",
+      "code": "from hmmlearn import hmm\n\n# Create a Hidden Markov Model\nmodel = hmm.GaussianHMM(n_components=2)\n\n# Fit the model to the data\nmodel.fit(X)\n\n# Predict hidden states\nhidden_states = model.predict(X)",
+      "tags": [
+        "machine learning",
+        "HMM",
+        "sequence modeling"
+      ]
+    },
+    {
+      "description": "Association Rule Mining (Apriori Algorithm)",
+      "code": "from mlxtend.frequent_patterns import apriori\nfrom mlxtend.frequent_patterns import association_rules\n\n# Generate frequent item sets with Apriori algorithm\nfrequent_item_sets = apriori(df, min_support=0.5, use_colnames=True)\n\n# Generate association rules\nrules = association_rules(frequent_item_sets, metric='lift', min_threshold=1.0)",
+      "tags": [
+        "machine learning",
+        "association rule mining",
+        "Apriori"
+      ]
+    },
+    {
+      "description": "Reinforcement Learning (Q-Learning)",
+      "code": "import numpy as np\n\n# Initialize Q-table\nQ = np.zeros((num_states, num_actions))\n\n# Q-learning algorithm\nfor episode in range(num_episodes):\n    state = env.reset()\n    done = False\n    while not done:\n        action = choose_action(Q, state)\n        next_state, reward, done, _ = env.step(action)\n        Q[state, action] = update_Q(Q, state, action, reward, next_state)\n        state = next_state",
+      "tags": [
+        "machine learning",
+        "reinforcement learning",
+        "Q-learning"
+      ]
+    },
+    {
+      "description": "Expectation-Maximization (EM) Algorithm",
+      "code": "from sklearn.mixture import GaussianMixture\n\n# Create a Gaussian Mixture Model\nmodel = GaussianMixture(n_components=2)\n\n# Fit the model to the data using EM\nmodel.fit(X)",
+      "tags": [
+        "machine learning",
+        "EM algorithm",
+        "clustering"
+      ]
+    },
+    {
+      "description": "Singular Value Decomposition (SVD)",
+      "code": "from scipy.linalg import svd\n\n# Perform Singular Value Decomposition\nU, S, VT = svd(X)",
+      "tags": [
+        "machine learning",
+        "SVD",
+        "dimensionality reduction"
+      ]
+    },
+    {
+      "description": "AdaBoost",
+      "code": "from sklearn.ensemble import AdaBoostClassifier\nfrom sklearn.tree import DecisionTreeClassifier\n\n# Create an AdaBoost classifier with decision trees\nbase_classifier = DecisionTreeClassifier(max_depth=1)\nmodel = AdaBoostClassifier(base_classifier, n_estimators=50)\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "machine learning",
+        "AdaBoost",
+        "ensemble learning"
+      ]
+    },
+    {
+      "description": "Principal Component Analysis (PCA)",
+      "code": "from sklearn.decomposition import PCA\n\n# Create a PCA model with desired number of components\nmodel = PCA(n_components=2)\n\n# Fit the model to the data\nmodel.fit(X)\n\n# Transform the data to the reduced dimensionality\nX_reduced = model.transform(X)",
+      "tags": [
+        "machine learning",
+        "PCA",
+        "dimensionality reduction"
+      ]
+    },
+    {
+      "description": "Expectation Maximization (EM) Algorithm",
+      "code": "from sklearn.mixture import GaussianMixture\n\n# Create a Gaussian Mixture Model\nmodel = GaussianMixture(n_components=2)\n\n# Fit the model to the data using EM\nmodel.fit(X)",
+      "tags": [
+        "machine learning",
+        "EM algorithm",
+        "clustering"
+      ]
+    },
+    {
+      "description": "Latent Dirichlet Allocation (LDA)",
+      "code": "from sklearn.decomposition import LatentDirichletAllocation\n\n# Create an LDA model\nmodel = LatentDirichletAllocation(n_components=5)\n\n# Fit the model to the data\nmodel.fit(X)",
+      "tags": [
+        "machine learning",
+        "LDA",
+        "topic modeling"
+      ]
+    },
+    {
+      "description": "Parallel Computing with MPI (Message Passing Interface)",
+      "code": "# Example MPI code in C\n#include <stdio.h>\n#include <mpi.h>\n\nint main(int argc, char* argv[]){\n    MPI_Init(&argc, &argv);\n    int rank, size;\n    MPI_Comm_rank(MPI_COMM_WORLD, &rank);\n    MPI_Comm_size(MPI_COMM_WORLD, &size);\n    printf(\"Hello from rank %d of %d\\n\", rank, size);\n    MPI_Finalize();\n    return 0;\n}",
+      "tags": [
+        "HPC",
+        "MPI",
+        "parallel computing"
+      ]
+    },
+    {
+      "description": "Parallel Computing with OpenMP",
+      "code": "// Example OpenMP code in C\n#include <stdio.h>\n#include <omp.h>\n\nint main() {\n    #pragma omp parallel\n    {\n        int thread_id = omp_get_thread_num();\n        printf(\"Hello from thread %d\\n\", thread_id);\n    }\n    return 0;\n}",
+      "tags": [
+        "HPC",
+        "OpenMP",
+        "parallel computing"
+      ]
+    },
+    {
+      "description": "Parallel Sorting Algorithms (e.g., Parallel Quicksort)",
+      "code": "# Example of parallel Quicksort in C using OpenMP\n#include <stdio.h>\n#include <stdlib.h>\n#include <omp.h>\n\nvoid quicksort(int arr[], int low, int high) {\n    if (low < high) {\n        int pi = partition(arr, low, high);\n        #pragma omp task\n        quicksort(arr, low, pi - 1);\n        #pragma omp task\n        quicksort(arr, pi + 1, high);\n    }\n}\n",
+      "tags": [
+        "HPC",
+        "parallel algorithms",
+        "sorting"
+      ]
+    },
+    {
+      "description": "Parallel Matrix Multiplication",
+      "code": "# Example of parallel matrix multiplication in C using OpenMP\n#include <stdio.h>\n#include <omp.h>\n\n#define N 1000\n\nvoid matrix_multiply(double A[N][N], double B[N][N], double C[N][N]) {\n    int i, j, k;\n    #pragma omp parallel for private(i, j, k)\n    for (i = 0; i < N; i++) {\n        for (j = 0; j < N; j++) {\n            C[i][j] = 0.0;\n            for (k = 0; k < N; k++) {\n                C[i][j] += A[i][k] * B[k][j];\n            }\n        }\n    }\n}",
+      "tags": [
+        "HPC",
+        "parallel computing",
+        "matrix multiplication"
+      ]
+    },
+    {
+      "description": "Parallel Search Algorithms (e.g., Parallel Binary Search)",
+      "code": "# Example of parallel binary search in C using OpenMP\n#include <stdio.h>\n#include <omp.h>\n\nint parallel_binary_search(int arr[], int size, int key) {\n    int low = 0, high = size - 1;\n    int found = -1;\n    #pragma omp parallel\n    {\n        while (low <= high && found == -1) {\n            int mid = (low + high) / 2;\n            if (arr[mid] == key) {\n                found = mid;\n            }\n            else if (arr[mid] < key) {\n                low = mid + 1;\n            }\n            else {\n                high = mid - 1;\n            }\n        }\n    }\n    return found;\n}",
+      "tags": [
+        "HPC",
+        "parallel algorithms",
+        "binary search"
+      ]
+    },
+    {
+      "description": "Parallel FFT (Fast Fourier Transform)",
+      "code": "# Example of parallel FFT using MPI in C\n#include <stdio.h>\n#include <complex.h>\n#include <math.h>\n#include <mpi.h>\n\nvoid parallel_fft(complex double *a, int n, MPI_Comm comm) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "parallel algorithms",
+        "FFT"
+      ]
+    },
+    {
+      "description": "Parallel Graph Algorithms (e.g., Parallel Breadth-First Search)",
+      "code": "# Example of parallel BFS using OpenMP in C\n#include <stdio.h>\n#include <omp.h>\n\nvoid parallel_bfs(graph_t* graph, int start_vertex) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "parallel algorithms",
+        "graph algorithms"
+      ]
+    },
+    {
+      "description": "Parallel Monte Carlo Simulation",
+      "code": "# Example of parallel Monte Carlo simulation using MPI in C\n#include <stdio.h>\n#include <stdlib.h>\n#include <mpi.h>\n\nvoid parallel_monte_carlo(int num_samples, int num_processes, MPI_Comm comm) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "parallel computing",
+        "Monte Carlo simulation"
+      ]
+    },
+    {
+      "description": "Parallel Dense Linear Algebra (e.g., BLAS and LAPACK)",
+      "code": "# Example of parallel dense linear algebra operations using BLAS in C\n#include <stdio.h>\n#include <cblas.h>\n\nvoid parallel_matrix_vector_mult(int m, int n, double* A, double* x, double* y) {\n    cblas_dgemv(CblasRowMajor, CblasNoTrans, m, n, 1.0, A, n, x, 1, 0.0, y, 1);\n}\n",
+      "tags": [
+        "HPC",
+        "parallel computing",
+        "linear algebra"
+      ]
+    },
+    {
+      "description": "Parallel Computational Fluid Dynamics (CFD) Simulation",
+      "code": "# Example of parallel CFD simulation using MPI in C\n#include <stdio.h>\n#include <stdlib.h>\n#include <mpi.h>\n\nvoid parallel_cfd_simulation(int num_cells, int num_processes, MPI_Comm comm) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "CFD",
+        "parallel computing"
+      ]
+    },
+    {
+      "description": "Parallel Particle Swarm Optimization (PSO)",
+      "code": "# Example of parallel PSO using OpenMP in C\n#include <stdio.h>\n#include <omp.h>\n\nvoid parallel_pso(int num_particles, int num_iterations) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "parallel algorithms",
+        "optimization"
+      ]
+    },
+    {
+      "description": "Parallel Genetic Algorithms (GA)",
+      "code": "# Example of parallel GA using MPI in C\n#include <stdio.h>\n#include <stdlib.h>\n#include <mpi.h>\n\nvoid parallel_genetic_algorithm(int population_size, int num_generations, MPI_Comm comm) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "parallel algorithms",
+        "genetic algorithms"
+      ]
+    },
+    {
+      "description": "Parallel Fast Multipole Method (FMM)",
+      "code": "# Example of parallel FMM using MPI in C\n#include <stdio.h>\n#include <stdlib.h>\n#include <mpi.h>\n\nvoid parallel_fmm(int num_particles, int num_processes, MPI_Comm comm) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "parallel algorithms",
+        "FMM"
+      ]
+    },
+    {
+      "description": "Parallel Fast Fourier Transform (FFT)",
+      "code": "# Example of parallel FFT using OpenMP in C\n#include <stdio.h>\n#include <stdlib.h>\n#include <omp.h>\n#include <complex.h>\n#include <math.h>\n\nvoid parallel_fft(complex double *a, int n) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "parallel algorithms",
+        "FFT"
+      ]
+    },
+    {
+      "description": "Parallel Graph Partitioning Algorithms",
+      "code": "# Example of parallel graph partitioning using METIS\n#include <metis.h>\n\nint main(int argc, char* argv[]) {\n    // METIS graph partitioning code\n    return 0;\n}\n",
+      "tags": [
+        "HPC",
+        "parallel algorithms",
+        "graph partitioning"
+      ]
+    },
+    {
+      "description": "Parallel Monte Carlo Methods (e.g., Parallel Monte Carlo Pi Calculation)",
+      "code": "# Example of parallel Monte Carlo Pi calculation using MPI in C\n#include <stdio.h>\n#include <stdlib.h>\n#include <mpi.h>\n\nvoid parallel_monte_carlo_pi(int num_samples, MPI_Comm comm) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "parallel computing",
+        "Monte Carlo methods"
+      ]
+    },
+    {
+      "description": "Parallel Dynamic Programming (e.g., Parallel Matrix Chain Multiplication)",
+      "code": "# Example of parallel matrix chain multiplication using OpenMP in C\n#include <stdio.h>\n#include <omp.h>\n\nvoid parallel_matrix_chain_mult(int n, int p[], int m[][n]) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "parallel algorithms",
+        "dynamic programming"
+      ]
+    },
+    {
+      "description": "Parallel Particle-in-Cell (PIC) Simulation",
+      "code": "# Example of parallel PIC simulation using MPI in C\n#include <stdio.h>\n#include <stdlib.h>\n#include <mpi.h>\n\nvoid parallel_pic_simulation(int num_particles, int num_cells, int num_processes, MPI_Comm comm) {\n    // Implementation not shown for brevity\n}\n",
+      "tags": [
+        "HPC",
+        "parallel computing",
+        "PIC simulation"
+      ]
+    },
+    {
+      "description": "A* Search Algorithm",
+      "code": "def astar_search(graph, start, goal):\n    open_set = PriorityQueue()\n    open_set.put(start, 0)\n    came_from = {}\n    g_score = {node: float('inf') for node in graph}\n    g_score[start] = 0\n    f_score = {node: float('inf') for node in graph}\n    f_score[start] = heuristic(start, goal)\n\n    while not open_set.empty():\n        current = open_set.get()\n        if current == goal:\n            return reconstruct_path(came_from, current)\n\n        for neighbor in graph[current]:\n            tentative_g_score = g_score[current] + distance(current, neighbor)\n            if tentative_g_score < g_score[neighbor]:\n                came_from[neighbor] = current\n                g_score[neighbor] = tentative_g_score\n                f_score[neighbor] = g_score[neighbor] + heuristic(neighbor, goal)\n                if neighbor not in open_set:\n                    open_set.put(neighbor, f_score[neighbor])\n    return None",
+      "tags": [
+        "AI",
+        "A* search",
+        "pathfinding"
+      ]
+    },
+    {
+      "description": "Minimax Algorithm (for Game Trees)",
+      "code": "def minimax(node, depth, maximizing_player):\n    if depth == 0 or node.is_terminal():\n        return node.evaluate()\n\n    if maximizing_player:\n        max_eval = -inf\n        for child in node.get_children():\n            eval = minimax(child, depth - 1, False)\n            max_eval = max(max_eval, eval)\n        return max_eval\n    else:\n        min_eval = +inf\n        for child in node.get_children():\n            eval = minimax(child, depth - 1, True)\n            min_eval = min(min_eval, eval)\n        return min_eval",
+      "tags": [
+        "AI",
+        "minimax",
+        "game playing"
+      ]
+    },
+    {
+      "description": "Artificial Neural Networks (ANN)",
+      "code": "import tensorflow as tf\nfrom tensorflow import keras\n\n# Define a neural network model\nmodel = keras.Sequential([\n    keras.layers.Dense(64, activation='relu', input_shape=(input_dim,)),\n    keras.layers.Dense(32, activation='relu'),\n    keras.layers.Dense(output_dim, activation='softmax')\n])\n\n# Compile the model\nmodel.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])\n\n# Train the model\nmodel.fit(X_train, y_train, epochs=10, batch_size=32)",
+      "tags": [
+        "AI",
+        "neural networks",
+        "deep learning"
+      ]
+    },
+    {
+      "description": "K-Means Clustering",
+      "code": "from sklearn.cluster import KMeans\n\n# Create a K-Means clustering model\nmodel = KMeans(n_clusters=3)\n\n# Fit the model to the data\nmodel.fit(X)\n\n# Get cluster assignments\ncluster_labels = model.labels_",
+      "tags": [
+        "AI",
+        "K-Means",
+        "clustering"
+      ]
+    },
+    {
+      "description": "Reinforcement Learning (Q-Learning)",
+      "code": "import numpy as np\n\n# Initialize Q-table\nQ = np.zeros((num_states, num_actions))\n\n# Q-learning algorithm\nfor episode in range(num_episodes):\n    state = env.reset()\n    done = False\n    while not done:\n        action = choose_action(Q, state)\n        next_state, reward, done, _ = env.step(action)\n        Q[state, action] = update_Q(Q, state, action, reward, next_state)\n        state = next_state",
+      "tags": [
+        "AI",
+        "reinforcement learning",
+        "Q-learning"
+      ]
+    },
+    {
+      "description": "Genetic Algorithms",
+      "code": "import random\n\n# Define a population of individuals\npopulation = [generate_individual() for _ in range(population_size)]\n\n# Evolution loop\nfor generation in range(num_generations):\n    # Evaluate fitness of each individual\n    fitness_scores = [evaluate_fitness(individual) for individual in population]\n\n    # Select individuals for reproduction\n    selected_population = select_population(population, fitness_scores)\n\n    # Apply crossover and mutation to create a new population\n    new_population = create_new_population(selected_population)\n\n    # Replace the old population with the new population\n    population = new_population",
+      "tags": [
+        "AI",
+        "genetic algorithms",
+        "optimization"
+      ]
+    },
+    {
+      "description": "Decision Trees",
+      "code": "from sklearn.tree import DecisionTreeClassifier\n\n# Create a decision tree classifier\nmodel = DecisionTreeClassifier()\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "AI",
+        "decision trees",
+        "classification"
+      ]
+    },
+    {
+      "description": "Natural Language Processing (NLP)",
+      "code": "import nltk\nfrom nltk.tokenize import word_tokenize\n\n# Tokenize a text\ntext = 'Natural language processing is an exciting field.'\ntokens = word_tokenize(text)",
+      "tags": [
+        "AI",
+        "NLP",
+        "text processing"
+      ]
+    },
+    {
+      "description": "Bayesian Networks",
+      "code": "from pgmpy.models import BayesianNetwork\nfrom pgmpy.factors.discrete import TabularCPD\n\n# Define a Bayesian network\nmodel = BayesianNetwork([('A', 'C'), ('B', 'C')])\n\n# Define Conditional Probability Distributions (CPDs)\ncpd_a = TabularCPD(variable='A', variable_card=2, values=[[0.3], [0.7]])\ncpd_b = TabularCPD(variable='B', variable_card=2, values=[[0.6], [0.4]])\ncpd_c = TabularCPD(variable='C', variable_card=2, values=[[0.2, 0.1, 0.7, 0.9], [0.8, 0.9, 0.3, 0.1]], evidence=['A', 'B'], evidence_card=[2, 2])\n\n# Add CPDs to the model\nmodel.add_cpds(cpd_a, cpd_b, cpd_c)\n\n# Check if the model is valid\nis_valid = model.check_model()",
+      "tags": [
+        "AI",
+        "Bayesian networks",
+        "probabilistic modeling"
+      ]
+    },
+    {
+      "description": "Support Vector Machines (SVM)",
+      "code": "from sklearn.svm import SVC\n\n# Create an SVM classifier\nmodel = SVC()\n\n# Fit the model to the training data\nmodel.fit(X_train, y_train)\n\n# Make predictions on new data\ny_pred = model.predict(X_test)",
+      "tags": [
+        "AI",
+        "SVM",
+        "classification"
+      ]
+    },
+    {
+      "description": "Markov Decision Processes (MDP)",
+      "code": "import numpy as np\n\n# Define the MDP\nnum_states = 4\nnum_actions = 2\ntransition_matrix = np.array([...])\nreward_matrix = np.array([...])\n\n# Value Iteration algorithm\ndef value_iteration(transition_matrix, reward_matrix, gamma, num_iterations):\n    values = np.zeros(num_states)\n    for _ in range(num_iterations):\n        new_values = np.zeros(num_states)\n        for s in range(num_states):\n            q_values = np.zeros(num_actions)\n            for a in range(num_actions):\n                q_values[a] = reward_matrix[s, a] + gamma * np.sum(transition_matrix[s, a, :] * values)\n            new_values[s] = np.max(q_values)\n        values = new_values\n    return values",
+      "tags": [
+        "AI",
+        "MDP",
+        "reinforcement learning"
+      ]
+    },
+    {
+      "description": "Hidden Markov Models (HMM)",
+      "code": "from hmmlearn import hmm\n\n# Create a Hidden Markov Model\nmodel = hmm.GaussianHMM(n_components=2)\n\n# Fit the model to the data\nmodel.fit(X)",
+      "tags": [
+        "AI",
+        "HMM",
+        "sequence modeling"
+      ]
+    },
+    {
+      "description": "Natural Language Understanding (NLU)",
+      "code": "import transformers\n\n# Load a pre-trained NLU model\nmodel = transformers.pipeline('question-answering', model='bert-large-uncased-whole-word-masking-finetuned-squad')\n\n# Perform question-answering\ncontext = 'Natural language understanding is a field of AI.'\nquestion = 'What is NLU?'\nanswer = model(question=question, context=context)",
+      "tags": [
+        "AI",
+        "NLU",
+        "language understanding"
+      ]
+    },
+    {
+      "description": "Monte Carlo Tree Search (MCTS)",
+      "code": "class Node:\n    def __init__(self, state):\n        self.state = state\n        self.children = []\n        self.visits = 0\n        self.value = 0.0\n\n    def expand(self):\n        # Expand the node by generating child nodes\n\n    def select_child(self):\n        # Select a child node using UCB formula\n\n    def update(self, value):\n        # Update the node's value and visit count\n\ndef mcts(root, num_simulations):\n    for _ in range(num_simulations):\n        node = root\n        while node.is_fully_expanded() and not node.is_terminal():\n            node = node.select_child()\n        if not node.is_terminal():\n            node.expand()\n            node = random.choice(node.children)\n        value = node.simulate()\n        node.update(value)\n\n# Initialize the root node and run MCTS\nroot = Node(initial_state)\nmcts(root, num_simulations)",
+      "tags": [
+        "AI",
+        "MCTS",
+        "game playing"
+      ]
+    },
+    {
+      "description": "Alpha-Beta Pruning (for Game Trees)",
+      "code": "def alpha_beta(node, depth, alpha, beta, maximizing_player):\n    if depth == 0 or node.is_terminal():\n        return node.evaluate()\n\n    if maximizing_player:\n        max_eval = -inf\n        for child in node.get_children():\n            eval = alpha_beta(child, depth - 1, alpha, beta, False)\n            max_eval = max(max_eval, eval)\n            alpha = max(alpha, eval)\n            if beta <= alpha:\n                break\n        return max_eval\n    else:\n        min_eval = +inf\n        for child in node.get_children():\n            eval = alpha_beta(child, depth - 1, alpha, beta, True)\n            min_eval = min(min_eval, eval)\n            beta = min(beta, eval)\n            if beta <= alpha:\n                break\n        return min_eval",
+      "tags": [
+        "AI",
+        "alpha-beta pruning",
+        "game playing"
+      ]
+    },
+    {
+      "description": "Fuzzy Logic",
+      "code": "import skfuzzy as fuzz\n\n# Define input variables and membership functions\nx = np.arange(0, 11, 1)\ninput_var = fuzz.trimf(x, [3, 5, 7])\n\n# Define output variables and membership functions\ny = np.arange(0, 11, 1)\noutput_var = fuzz.trimf(y, [1, 4, 9])\n\n# Apply fuzzy logic operations (e.g., fuzzy AND, fuzzy OR, fuzzy NOT)",
+      "tags": [
+        "AI",
+        "fuzzy logic",
+        "uncertainty modeling"
+      ]
+    },
+    {
+      "description": "AES Encryption",
+      "code": "# Python implementation of AES encryption\nfrom Crypto.Cipher import AES\n\n# Key and plaintext\nkey = b'Sixteen byte key'\nplaintext = b'This is a secret!'\n\n# Create an AES cipher object\ncipher = AES.new(key, AES.MODE_ECB)\n\n# Encrypt the plaintext\nciphertext = cipher.encrypt(plaintext)\n",
+      "tags": [
+        "cybersecurity",
+        "encryption",
+        "AES"
+      ]
+    },
+    {
+      "description": "RSA Encryption",
+      "code": "# Python implementation of RSA encryption\nfrom Crypto.PublicKey import RSA\nfrom Crypto.Cipher import PKCS1_OAEP\n\n# Generate an RSA key pair\nkey = RSA.generate(2048)\n\n# Create an RSA cipher object\ncipher = PKCS1_OAEP.new(key)\n\n# Encrypt the plaintext\nciphertext = cipher.encrypt(b'This is a secret!')\n",
+      "tags": [
+        "cybersecurity",
+        "encryption",
+        "RSA"
+      ]
+    },
+    {
+      "description": "Hash Functions (MD5, SHA-256)",
+      "code": "# Python implementation of MD5 hash\nimport hashlib\n\n# Calculate MD5 hash\nplaintext = b'This is a message'\nhash_md5 = hashlib.md5(plaintext).hexdigest()\n\n# Python implementation of SHA-256 hash\nimport hashlib\n\n# Calculate SHA-256 hash\nplaintext = b'This is a message'\nhash_sha256 = hashlib.sha256(plaintext).hexdigest()\n",
+      "tags": [
+        "cybersecurity",
+        "hash functions",
+        "MD5",
+        "SHA-256"
+      ]
+    },
+    {
+      "description": "Digital Signatures (RSA)",
+      "code": "# Python implementation of RSA digital signature\nfrom Crypto.Signature import pkcs1_15\nfrom Crypto.Hash import SHA256\n\n# Create an RSA key pair\nkey = RSA.generate(2048)\n\n# Sign a message\nmessage = b'This message is signed'\nhash = SHA256.new(message)\nsignature = pkcs1_15.new(key).sign(hash)\n\n# Verify a signature\ntry:\n    pkcs1_15.new(key.publickey()).verify(hash, signature)\n    print('Signature is valid')\nexcept (ValueError, TypeError):\n    print('Signature is not valid')\n",
+      "tags": [
+        "cybersecurity",
+        "digital signatures",
+        "RSA"
+      ]
+    },
+    {
+      "description": "Firewalls and Intrusion Detection Systems (IDS)",
+      "code": "# Example firewall rule to allow incoming HTTP traffic\nrule = {'protocol': 'tcp', 'source_ip': 'any', 'source_port': 'any', 'destination_ip': 'web_server_ip', 'destination_port': 80, 'action': 'allow'}\n\n# Example intrusion detection rule to detect SQL injection\nrule = {'pattern': 'SELECT.*FROM', 'action': 'alert'}\n",
+      "tags": [
+        "cybersecurity",
+        "firewalls",
+        "IDS"
+      ]
+    },
+    {
+      "description": "Packet Sniffing (Wireshark)",
+      "code": "# Wireshark packet capturing using Python\nimport pyshark\n\ncap = pyshark.LiveCapture(interface='eth0')\n\ndef print_packet(pkt):\n    print(pkt)\n\ncap.apply_on_packets(print_packet)\n",
+      "tags": [
+        "cybersecurity",
+        "packet sniffing",
+        "Wireshark"
+      ]
+    },
+    {
+      "description": "Intrusion Detection (Snort)",
+      "code": "# Snort intrusion detection rule example\nalert tcp $HOME_NET any -> $EXTERNAL_NET 80 (msg:\"Possible SQL Injection\"; content:\"SELECT.*FROM\"; nocase; classtype:attempted-admin; sid:1;)\n",
+      "tags": [
+        "cybersecurity",
+        "intrusion detection",
+        "Snort"
+      ]
+    },
+    {
+      "description": "Secure Sockets Layer (SSL)/Transport Layer Security (TLS)",
+      "code": "# Python code for using SSL/TLS\nimport socket\nimport ssl\n\n# Create a socket\ns = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n# Wrap the socket with SSL/TLS\ns = ssl.wrap_socket(s, keyfile='key.pem', certfile='cert.pem', server_side=True)\n",
+      "tags": [
+        "cybersecurity",
+        "SSL",
+        "TLS"
+      ]
+    },
+    {
+      "description": "Two-Factor Authentication (2FA)",
+      "code": "# Python code for implementing two-factor authentication\nimport pyotp\n\n# Generate a TOTP token\notp_secret = pyotp.random_base32()\ntotp = pyotp.TOTP(otp_secret)\ntoken = totp.now()\n",
+      "tags": [
+        "cybersecurity",
+        "2FA",
+        "TOTP"
+      ]
+    },
+    {
+      "description": "Password Hashing (bcrypt)",
+      "code": "# Python code for hashing passwords using bcrypt\nimport bcrypt\n\n# Hash a password\npassword = b'my_secure_password'\nhashed_password = bcrypt.hashpw(password, bcrypt.gensalt())\n\n# Verify a password\nif bcrypt.checkpw(password, hashed_password):\n    print('Password is correct')\nelse:\n    print('Password is incorrect')\n",
+      "tags": [
+        "cybersecurity",
+        "password hashing",
+        "bcrypt"
+      ]
+    },
+    {
+      "description": "Network Security Protocols (IPsec)",
+      "code": "# IPsec configuration example in Linux\n# Configure IPsec for securing network communication\n\n# Define a security association (SA)\nip xfrm policy add dir out tmpl src local dst remote proto esp mode tunnel\n\n# Add a security policy\nip xfrm state add src local dst remote proto esp spi 0x12345678 mode tunnel\n",
+      "tags": [
+        "cybersecurity",
+        "IPsec",
+        "network security"
+      ]
+    },
+    {
+      "description": "Security Information and Event Management (SIEM)",
+      "code": "# Example of log analysis with SIEM\n# Parse and analyze log data for security events\n",
+      "tags": [
+        "cybersecurity",
+        "SIEM",
+        "log analysis"
+      ]
+    },
+    {
+      "description": "Vulnerability Scanning (Nessus)",
+      "code": "# Example of using Nessus for vulnerability scanning\n# Scan network hosts for security vulnerabilities\n",
+      "tags": [
+        "cybersecurity",
+        "vulnerability scanning",
+        "Nessus"
+      ]
+    },
+    {
+      "description": "Security Patch Management",
+      "code": "# Example of security patch management\n# Apply security patches to keep systems up-to-date\n",
+      "tags": [
+        "cybersecurity",
+        "patch management",
+        "security"
+      ]
+    },
+    {
+      "description": "Security Information Exchange (STIX/TAXII)",
+      "code": "# Example of using STIX/TAXII for threat intelligence sharing\n# Exchange threat intelligence information with other organizations\n",
+      "tags": [
+        "cybersecurity",
+        "STIX",
+        "TAXII",
+        "threat intelligence"
+      ]
+    },
+    {
+      "description": "Network Access Control (NAC)",
+      "code": "# Example of Network Access Control (NAC) implementation\n# Control and manage access to network resources based on security policies\n",
+      "tags": [
+        "cybersecurity",
+        "NAC",
+        "network security"
+      ]
+    },
+    {
+      "description": "Penetration Testing (Metasploit)",
+      "code": "# Example of using Metasploit for penetration testing\n# Test and assess the security of systems and networks\n",
+      "tags": [
+        "cybersecurity",
+        "penetration testing",
+        "Metasploit"
+      ]
+    },
+    {
+      "description": "Security Awareness Training",
+      "code": "# Example of security awareness training program\n# Educate employees and users about cybersecurity best practices\n",
+      "tags": [
+        "cybersecurity",
+        "security awareness",
+        "training"
+      ]
+    },
+    {
+      "description": "Incident Response Plan (IRP)",
+      "code": "# Example of an incident response plan\n# Define procedures for responding to cybersecurity incidents\n",
+      "tags": [
+        "cybersecurity",
+        "incident response",
+        "IRP"
+      ]
+    },
+    {
+      "description": "Security Information Display (SID)",
+      "code": "# Example of a security information display\n# Visualize security-related information for monitoring and analysis\n",
+      "tags": [
+        "cybersecurity",
+        "security information",
+        "SID"
+      ]
+    },
+    {
+      "name": "Binary Search",
+      "description": "A divide-and-conquer algorithm that efficiently searches for a target value in a sorted array.",
+      "code": "function binarySearch(arr, target) {\n  let left = 0;\n  let right = arr.length - 1;\n  while (left <= right) {\n    let mid = Math.floor((left + right) / 2);\n    if (arr[mid] === target) return mid;\n    if (arr[mid] < target) left = mid + 1;\n    else right = mid - 1;\n  }\n  return -1;\n}",
+      "tags": [
+        "binary search",
+        "searching",
+        "divide and conquer"
+      ]
+    },
+    {
+      "name": "Linear Search",
+      "description": "A simple searching algorithm that sequentially searches for a target value in an array.",
+      "code": "function linearSearch(arr, target) {\n  for (let i = 0; i < arr.length; i++) {\n    if (arr[i] === target) return i;\n  }\n  return -1;\n}",
+      "tags": [
+        "linear search",
+        "searching"
+      ]
+    },
+    {
+      "name": "Binary Search Tree (BST)",
+      "description": "A binary tree structure in which the left subtree contains values less than the root, and the right subtree contains values greater than the root, facilitating efficient searching and insertion.",
+      "code": "class TreeNode {\n  constructor(val) {\n    this.val = val;\n    this.left = null;\n    this.right = null;\n  }\n}\nclass BinarySearchTree {\n  constructor() {\n    this.root = null;\n  }\n  // Insertion code...\n  // Search code...\n}",
+      "tags": [
+        "binary search tree",
+        "BST",
+        "tree"
+      ]
+    },
+    {
+      "name": "Red-Black Tree",
+      "description": "A self-balancing binary search tree that maintains balance through a set of rules to ensure logarithmic height and efficient searching.",
+      "code": "class Node {\n  constructor(key, color) {\n    this.key = key;\n    this.left = null;\n    this.right = null;\n    this.color = color;\n  }\n}\nclass RedBlackTree {\n  constructor() {\n    this.root = null;\n  }\n  // Insertion code...\n  // Search code...\n}",
+      "tags": [
+        "red-black tree",
+        "self-balancing tree",
+        "BST"
+      ]
+    },
+    {
+      "name": "Hash Table",
+      "description": "A data structure that uses a hash function to map keys to values, enabling fast retrieval of values based on their keys.",
+      "code": "class HashTable {\n  constructor() {\n    this.table = new Array(1000); // Choose an appropriate size\n  }\n  // Hash function and methods for insertion and retrieval...\n}",
+      "tags": [
+        "hash table",
+        "hashing",
+        "data structure"
+      ]
+    },
+    {
+      "description": "Calculate the square root of a number using the math module",
+      "code": "import math\n\ndef sqrt(number):\n    return math.sqrt(number)\n\n# Example Usage:\nresult = sqrt(9)",
+      "tags": [
+        "python",
+        "math",
+        "square root"
+      ]
+    },
+    {
+      "description": "Create a simple HTTP server using Python's http.server module",
+      "code": "import http.server\nimport socketserver\n\nPORT = 8000\n\nHandler = http.server.SimpleHTTPRequestHandler\n\nwith socketserver.TCPServer(('', PORT), Handler) as httpd:\n    print('serving at port', PORT)\n    httpd.serve_forever()",
+      "tags": [
+        "python",
+        "http",
+        "server"
+      ]
+    },
+    {
+      "description": "Extract the domain name from a URL",
+      "code": "from urllib.parse import urlparse\n\ndef get_domain(url):\n    parsed_url = urlparse(url)\n    return parsed_url.netloc\n\n# Example Usage:\ndomain = get_domain('https://www.example.com')",
+      "tags": [
+        "python",
+        "urlparse",
+        "domain"
+      ]
+    },
+    {
+      "description": "Check if a string is a valid IPv4 address",
+      "code": "import socket\n\ndef is_valid_ipv4_address(address):\n    try:\n        socket.inet_aton(address)\n        return True\n    except socket.error:\n        return False\n\n# Example Usage:\nis_valid = is_valid_ipv4_address('192.168.1.1')",
+      "tags": [
+        "python",
+        "networking",
+        "ipv4"
+      ]
+    },
+    {
+      "description": "Encode and decode a string using Base64",
+      "code": "import base64\n\ndef encode_string(s):\n    return base64.b64encode(s.encode()).decode()\n\ndef decode_string(s):\n    return base64.b64decode(s).decode()\n\n# Example Usage:\nencoded = encode_string('hello world')\ndecoded = decode_string(encoded)",
+      "tags": [
+        "python",
+        "base64",
+        "encode",
+        "decode"
+      ]
+    },
+    {
+      "description": "Generate a UUID (Universally Unique Identifier)",
+      "code": "import uuid\n\ndef generate_uuid():\n    return str(uuid.uuid4())\n\n# Example Usage:\nunique_id = generate_uuid()",
+      "tags": [
+        "python",
+        "uuid",
+        "unique identifier"
+      ]
+    },
+    {
+      "description": "Create a decorator that logs function execution time",
+      "code": "import time\n\ndef timer_decorator(func):\n    def wrapper(*args, **kwargs):\n        start_time = time.time()\n        result = func(*args, **kwargs)\n        end_time = time.time()\n        print(f'{func.__name__} executed in {end_time - start_time} seconds')\n        return result\n    return wrapper\n\n@timer_decorator\ndef example_function():\n    time.sleep(2)",
+      "tags": [
+        "python",
+        "decorator",
+        "performance"
+      ]
+    },
+    {
+      "description": "Find the longest word in a sentence",
+      "code": "def longest_word(sentence):\n    words = sentence.split()\n    longest = max(words, key=len)\n    return longest\n\n# Example Usage:\nlongest = longest_word('This is an example sentence')",
+      "tags": [
+        "python",
+        "string",
+        "longest word"
+      ]
+    },
+    {
+      "description": "Implement a binary search tree class with insert and search methods",
+      "code": "class BinarySearchTree:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\n    def insert(self, value):\n        if value < self.value:\n            if self.left is None:\n                self.left = BinarySearchTree(value)\n            else:\n                self.left.insert(value)\n        else:\n            if self.right is None:\n                self.right = BinarySearchTree(value)\n            else:\n                self.right.insert(value)\n\n    def search(self, value):\n        if value < self.value:\n            return self.left.search(value) if self.left else False\n        elif value > self.value:\n            return self.right.search(value) if self.right else False\n        else:\n            return True",
+      "tags": [
+        "python",
+        "binary search tree",
+        "data structures"
+      ]
+    },
+    {
+      "description": "Convert Celsius to Fahrenheit",
+      "code": "def celsius_to_fahrenheit(celsius):\n    return (celsius * 9/5) + 32\n\n# Example Usage:\nfahrenheit = celsius_to_fahrenheit(30)",
+      "tags": [
+        "python",
+        "temperature conversion",
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "description": "Calculate the square root of a number using the math module",
+      "code": "import math\n\ndef sqrt(number):\n    return math.sqrt(number)\n\n# Example Usage:\nresult = sqrt(9)",
+      "tags": [
+        "python",
+        "math",
+        "square root"
+      ]
+    },
+    {
+      "description": "Create a simple HTTP server using Python's http.server module",
+      "code": "import http.server\nimport socketserver\n\nPORT = 8000\n\nHandler = http.server.SimpleHTTPRequestHandler\n\nwith socketserver.TCPServer(('', PORT), Handler) as httpd:\n    print('serving at port', PORT)\n    httpd.serve_forever()",
+      "tags": [
+        "python",
+        "http",
+        "server"
+      ]
+    },
+    {
+      "description": "Extract the domain name from a URL",
+      "code": "from urllib.parse import urlparse\n\ndef get_domain(url):\n    parsed_url = urlparse(url)\n    return parsed_url.netloc\n\n# Example Usage:\ndomain = get_domain('https://www.example.com')",
+      "tags": [
+        "python",
+        "urlparse",
+        "domain"
+      ]
+    },
+    {
+      "description": "Check if a string is a valid IPv4 address",
+      "code": "import socket\n\ndef is_valid_ipv4_address(address):\n    try:\n        socket.inet_aton(address)\n        return True\n    except socket.error:\n        return False\n\n# Example Usage:\nis_valid = is_valid_ipv4_address('192.168.1.1')",
+      "tags": [
+        "python",
+        "networking",
+        "ipv4"
+      ]
+    },
+    {
+      "description": "Encode and decode a string using Base64",
+      "code": "import base64\n\ndef encode_string(s):\n    return base64.b64encode(s.encode()).decode()\n\ndef decode_string(s):\n    return base64.b64decode(s).decode()\n\n# Example Usage:\nencoded = encode_string('hello world')\ndecoded = decode_string(encoded)",
+      "tags": [
+        "python",
+        "base64",
+        "encode",
+        "decode"
+      ]
+    },
+    {
+      "description": "Generate a UUID (Universally Unique Identifier)",
+      "code": "import uuid\n\ndef generate_uuid():\n    return str(uuid.uuid4())\n\n# Example Usage:\nunique_id = generate_uuid()",
+      "tags": [
+        "python",
+        "uuid",
+        "unique identifier"
+      ]
+    },
+    {
+      "description": "Create a decorator that logs function execution time",
+      "code": "import time\n\ndef timer_decorator(func):\n    def wrapper(*args, **kwargs):\n        start_time = time.time()\n        result = func(*args, **kwargs)\n        end_time = time.time()\n        print(f'{func.__name__} executed in {end_time - start_time} seconds')\n        return result\n    return wrapper\n\n@timer_decorator\ndef example_function():\n    time.sleep(2)",
+      "tags": [
+        "python",
+        "decorator",
+        "performance"
+      ]
+    },
+    {
+      "description": "Find the longest word in a sentence",
+      "code": "def longest_word(sentence):\n    words = sentence.split()\n    longest = max(words, key=len)\n    return longest\n\n# Example Usage:\nlongest = longest_word('This is an example sentence')",
+      "tags": [
+        "python",
+        "string",
+        "longest word"
+      ]
+    },
+    {
+      "description": "Implement a binary search tree class with insert and search methods",
+      "code": "class BinarySearchTree:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\n    def insert(self, value):\n        if value < self.value:\n            if self.left is None:\n                self.left = BinarySearchTree(value)\n            else:\n                self.left.insert(value)\n        else:\n            if self.right is None:\n                self.right = BinarySearchTree(value)\n            else:\n                self.right.insert(value)\n\n    def search(self, value):\n        if value < self.value:\n            return self.left.search(value) if self.left else False\n        elif value > self.value:\n            return self.right.search(value) if self.right else False\n        else:\n            return True",
+      "tags": [
+        "python",
+        "binary search tree",
+        "data structures"
+      ]
+    },
+    {
+      "description": "Convert Celsius to Fahrenheit",
+      "code": "def celsius_to_fahrenheit(celsius):\n    return (celsius * 9/5) + 32\n\n# Example Usage:\nfahrenheit = celsius_to_fahrenheit(30)",
+      "tags": [
+        "python",
+        "temperature conversion",
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "description": "Read a JSON file and parse its contents",
+      "code": "import json\n\nwith open('data.json', 'r') as file:\n    data = json.load(file)\n\n# Example Usage:\nprint(data)",
+      "tags": [
+        "python",
+        "json",
+        "file reading"
+      ]
+    },
+    {
+      "description": "Send an HTTP GET request using the requests library",
+      "code": "import requests\n\nresponse = requests.get('https://api.example.com/data')\n\n# Example Usage:\nprint(response.json())",
+      "tags": [
+        "python",
+        "requests",
+        "http",
+        "api"
+      ]
+    },
+    {
+      "description": "Plot a simple line graph using matplotlib",
+      "code": "import matplotlib.pyplot as plt\n\nx = [0, 1, 2, 3, 4]\ny = [0, 2, 4, 6, 8]\n\nplt.plot(x, y)\nplt.show()",
+      "tags": [
+        "python",
+        "matplotlib",
+        "plotting",
+        "graph"
+      ]
+    },
+    {
+      "description": "Connect to a PostgreSQL database using psycopg2",
+      "code": "import psycopg2\n\nconn = psycopg2.connect(\n    dbname='your_dbname', user='dbuser', password='dbpass', host='localhost'\n)\ncursor = conn.cursor()\n\n# Example Usage:\ncursor.execute('SELECT * FROM your_table')\nresults = cursor.fetchall()",
+      "tags": [
+        "python",
+        "postgresql",
+        "database",
+        "psycopg2"
+      ]
+    },
+    {
+      "description": "Create a simple Flask web application",
+      "code": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello_world():\n    return 'Hello, World!'\n\nif __name__ == '__main__':\n    app.run()",
+      "tags": [
+        "python",
+        "flask",
+        "web application"
+      ]
+    },
+    {
+      "description": "Perform a SQL query using SQLAlchemy",
+      "code": "from sqlalchemy import create_engine\n\nengine = create_engine('sqlite:///example.db')\nconnection = engine.connect()\nresult = connection.execute('select * from some_table')\n\nfor row in result:\n    print(row)",
+      "tags": [
+        "python",
+        "sqlalchemy",
+        "database"
+      ]
+    },
+    {
+      "description": "Create a new Pandas DataFrame and add data to it",
+      "code": "import pandas as pd\n\ndf = pd.DataFrame(columns=['col1', 'col2'])\ndf.loc[0] = ['data1', 'data2']\n\n# Example Usage:\nprint(df)",
+      "tags": [
+        "python",
+        "pandas",
+        "dataframe"
+      ]
+    },
+    {
+      "description": "Use Regex to find all matches of a pattern in a string",
+      "code": "import re\n\npattern = r'\\b[A-Za-z]+\\b'\ntext = 'Find all words in this sentence.'\n\nmatches = re.findall(pattern, text)\n\n# Example Usage:\nprint(matches)",
+      "tags": [
+        "python",
+        "regex",
+        "pattern matching"
+      ]
+    },
+    {
+      "description": "Serialize a Python object to a JSON string",
+      "code": "import json\n\nmy_data = {'key': 'value', 'number': 123}\njson_string = json.dumps(my_data)\n\n# Example Usage:\nprint(json_string)",
+      "tags": [
+        "python",
+        "json",
+        "serialization"
+      ]
+    },
+    {
+      "description": "Unzip a file using the zipfile module",
+      "code": "import zipfile\n\nwith zipfile.ZipFile('file.zip', 'r') as zip_ref:\n    zip_ref.extractall('target_directory')\n\n# Example Usage:\nprint('File extracted')",
+      "tags": [
+        "python",
+        "zipfile",
+        "file handling"
+      ]
+    },
+    {
+      "description": "Calculate the mean of a list of numbers",
+      "code": "def calculate_mean(numbers):\n    return sum(numbers) / len(numbers)\n\n# Example Usage:\nmean_value = calculate_mean([1, 2, 3, 4, 5])",
+      "tags": [
+        "python",
+        "mean",
+        "average",
+        "math"
+      ]
+    },
+    {
+      "description": "Check if a file exists using os.path",
+      "code": "import os\n\nfile_exists = os.path.exists('example.txt')\n\n# Example Usage:\nprint(file_exists)",
+      "tags": [
+        "python",
+        "file",
+        "os",
+        "existence check"
+      ]
+    },
+    {
+      "description": "Create a new thread using the threading module",
+      "code": "import threading\n\ndef print_numbers():\n    for i in range(1, 6):\n        print(i)\n\nthread = threading.Thread(target=print_numbers)\nthread.start()\nthread.join()",
+      "tags": [
+        "python",
+        "threading",
+        "concurrency"
+      ]
+    },
+    {
+      "description": "Fetch data from an API using Python's requests library",
+      "code": "import requests\n\nresponse = requests.get('https://api.example.com/data')\njson_data = response.json()\n\n# Example Usage:\nprint(json_data)",
+      "tags": [
+        "python",
+        "requests",
+        "api",
+        "http"
+      ]
+    },
+    {
+      "description": "Parse an HTML document with BeautifulSoup",
+      "code": "from bs4 import BeautifulSoup\n\nhtml_doc = '<html><head><title>Title</title></head><body><p>Hello World!</p></body></html>'\nsoup = BeautifulSoup(html_doc, 'html.parser')\n\n# Example Usage:\nprint(soup.prettify())",
+      "tags": [
+        "python",
+        "beautifulsoup",
+        "html",
+        "parsing"
+      ]
+    },
+    {
+      "description": "Use list slicing to reverse the elements of a list",
+      "code": "my_list = [1, 2, 3, 4, 5]\nreversed_list = my_list[::-1]\n\n# Example Usage:\nprint(reversed_list)",
+      "tags": [
+        "python",
+        "list",
+        "slicing",
+        "reverse"
+      ]
+    },
+    {
+      "description": "Send an email using smtplib",
+      "code": "import smtplib\n\nserver = smtplib.SMTP('smtp.example.com', 587)\nserver.starttls()\nserver.login('username@example.com', 'password')\n\nserver.sendmail('from@example.com', 'to@example.com', 'This is a test email.')\nserver.quit()",
+      "tags": [
+        "python",
+        "smtplib",
+        "email",
+        "sending mail"
+      ]
+    },
+    {
+      "description": "Generate a random password with string and random modules",
+      "code": "import random\nimport string\n\ndef generate_password(length):\n    characters = string.ascii_letters + string.digits + string.punctuation\n    return ''.join(random.choice(characters) for i in range(length))\n\n# Example Usage:\npassword = generate_password(8)",
+      "tags": [
+        "python",
+        "password",
+        "random",
+        "security"
+      ]
+    },
+    {
+      "description": "Create a TCP socket server",
+      "code": "import socket\n\nserver_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\nserver_socket.bind(('localhost', 12345))\nserver_socket.listen(5)\n\nwhile True:\n    client_socket, addr = server_socket.accept()\n    print('Connection from', addr)\n    client_socket.sendall(b'Hello, client!')\n    client_socket.close()",
+      "tags": [
+        "python",
+        "socket",
+        "tcp",
+        "networking"
+      ]
+    },
+    {
+      "description": "Perform a linear search on a list",
+      "code": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1\n\n# Example Usage:\nindex = linear_search([1, 2, 3, 4, 5], 3)",
+      "tags": [
+        "python",
+        "linear search",
+        "algorithm"
+      ]
+    },
+    {
+      "description": "Implement a recursive function to calculate the nth Fibonacci number",
+      "code": "def fibonacci(n):\n    if n <= 1:\n        return n\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)\n\n# Example Usage:\nfib_number = fibonacci(5)",
+      "tags": [
+        "python",
+        "fibonacci",
+        "recursion",
+        "algorithm"
+      ]
+    },
+    {
+      "description": "Write a function to sort a list using insertion sort",
+      "code": "def insertion_sort(arr):\n    for i in range(1, len(arr)):\n        key = arr[i]\n        j = i-1\n        while j >=0 and key < arr[j] :\n                arr[j + 1] = arr[j]\n                j -= 1\n        arr[j + 1] = key\n    return arr\n\n# Example Usage:\nsorted_list = insertion_sort([12, 11, 13, 5, 6])",
+      "tags": [
+        "python",
+        "insertion sort",
+        "sorting",
+        "algorithm"
+      ]
+    },
+    {
+      "description": "Create a simple class to represent a complex number",
+      "code": "class ComplexNumber:\n    def __init__(self, real, imag):\n        self.real = real\n        self.imag = imag\n\n    def __str__(self):\n        return f'{self.real} + {self.imag}i'\n\n# Example Usage:\ncomplex_num = ComplexNumber(2, 3)\nprint(complex_num)",
+      "tags": [
+        "python",
+        "class",
+        "object-oriented",
+        "complex number"
+      ]
+    },
+    {
+      "description": "Implement a function to merge two sorted lists",
+      "code": "def merge_sorted_lists(l1, l2):\n    merged = []\n    while l1 and l2:\n        if l1[0] < l2[0]:\n            merged.append(l1.pop(0))\n        else:\n            merged.append(l2.pop(0))\n    merged.extend(l1)\n    merged.extend(l2)\n    return merged\n\n# Example Usage:\nmerged_list = merge_sorted_lists([1, 3, 5], [2, 4, 6])",
+      "tags": [
+        "python",
+        "merge",
+        "sorted lists",
+        "algorithm"
+      ]
+    },
+    {
+      "description": "Calculate the greatest common divisor (GCD) using Euclid's algorithm",
+      "code": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\n# Example Usage:\ngcd_result = gcd(54, 24)",
+      "tags": [
+        "python",
+        "gcd",
+        "euclid's algorithm",
+        "math"
+      ]
+    },
+    {
+      "description": "Implement a binary search algorithm",
+      "code": "def binary_search(arr, low, high, x):\n    if high >= low:\n        mid = (high + low) // 2\n        if arr[mid] == x:\n            return mid\n        elif arr[mid] > x:\n            return binary_search(arr, low, mid - 1, x)\n        else:\n            return binary_search(arr, mid + 1, high, x)\n    else:\n        return -1\n\n# Example Usage:\narr = [2, 3, 4, 10, 40]\nresult = binary_search(arr, 0, len(arr)-1, 10)",
+      "tags": [
+        "python",
+        "binary search",
+        "algorithm",
+        "recursion"
+      ]
+    },
+    {
+      "description": "Generate permutations of a given list",
+      "code": "from itertools import permutations\n\ndef generate_permutations(lst):\n    return list(permutations(lst))\n\n# Example Usage:\nperms = generate_permutations([1, 2, 3])",
+      "tags": [
+        "python",
+        "permutations",
+        "itertools",
+        "algorithm"
+      ]
+    },
+    {
+      "description": "Create a stack class with push and pop operations",
+      "code": "class Stack:\n    def __init__(self):\n        self.items = []\n\n    def is_empty(self):\n        return self.items == []\n\n    def push(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        return self.items.pop()\n\n    def peek(self):\n        return self.items[-1]\n\n    def size(self):\n        return len(self.items)\n\n# Example Usage:\nstack = Stack()\nstack.push('a')\nstack.push('b')\nstack.pop()",
+      "tags": [
+        "python",
+        "stack",
+        "data structures"
+      ]
+    },
+    {
+      "description": "Implement a queue using two stacks",
+      "code": "class Queue:\n    def __init__(self):\n        self.stack1 = []\n        self.stack2 = []\n\n    def enqueue(self, item):\n        self.stack1.append(item)\n\n    def dequeue(self):\n        if not self.stack2:\n            while self.stack1:\n                self.stack2.append(self.stack1.pop())\n        return self.stack2.pop()\n\n# Example Usage:\nqueue = Queue()\nqueue.enqueue(1)\nqueue.enqueue(2)\nqueue.dequeue()",
+      "tags": [
+        "python",
+        "queue",
+        "stack",
+        "data structures"
+      ]
+    },
+    {
+      "description": "Find the minimum value in a list",
+      "code": "def find_minimum(arr):\n    return min(arr)\n\n# Example Usage:\nminimum = find_minimum([4, 2, 8, 6])",
+      "tags": [
+        "python",
+        "min",
+        "list"
+      ]
+    },
+    {
+      "description": "Check if a year is a leap year",
+      "code": "def is_leap_year(year):\n    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)\n\n# Example Usage:\nleap_year = is_leap_year(2020)",
+      "tags": [
+        "python",
+        "leap year",
+        "date"
+      ]
+    },
+    {
+      "description": "Count the number of vowels in a string",
+      "code": "def count_vowels(s):\n    return sum(1 for char in s if char in 'aeiouAEIOU')\n\n# Example Usage:\nvowel_count = count_vowels('Hello World')",
+      "tags": [
+        "python",
+        "string",
+        "count"
+      ]
+    },
+    {
+      "description": "Implement a function to check for a prime number",
+      "code": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\n# Example Usage:\nprime = is_prime(11)",
+      "tags": [
+        "python",
+        "prime",
+        "number"
+      ]
+    },
+    {
+      "description": "Generate a list of prime numbers up to n",
+      "code": "def generate_primes(n):\n    primes = []\n    for possiblePrime in range(2, n + 1):\n        isPrime = True\n        for num in range(2, int(possiblePrime ** 0.5) + 1):\n            if possiblePrime % num == 0:\n                isPrime = False\n                break\n        if isPrime:\n            primes.append(possiblePrime)\n    return primes\n\n# Example Usage:\nprimes = generate_primes(20)",
+      "tags": [
+        "python",
+        "prime numbers",
+        "list"
+      ]
+    },
+    {
+      "description": "Calculate the factorial of a number using iteration",
+      "code": "def factorial_iterative(n):\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result\n\n# Example Usage:\nfact = factorial_iterative(5)",
+      "tags": [
+        "python",
+        "factorial",
+        "iteration"
+      ]
+    },
+    {
+      "description": "Reverse a string",
+      "code": "def reverse_string(s):\n    return s[::-1]\n\n# Example Usage:\nreversed_str = reverse_string('Hello')",
+      "tags": [
+        "python",
+        "string",
+        "reverse"
+      ]
+    },
+    {
+      "description": "Find the intersection of two lists",
+      "code": "def intersect_lists(lst1, lst2):\n    return list(set(lst1) & set(lst2))\n\n# Example Usage:\nintersection = intersect_lists([1, 2, 3], [2, 3, 4])",
+      "tags": [
+        "python",
+        "lists",
+        "intersection"
+      ]
+    },
+    {
+      "description": "Check if two strings are anagrams",
+      "code": "def are_anagrams(str1, str2):\n    return sorted(str1) == sorted(str2)\n\n# Example Usage:\nanagrams = are_anagrams('listen', 'silent')",
+      "tags": [
+        "python",
+        "anagrams",
+        "string"
+      ]
+    },
+    {
+      "description": "Find the second largest number in a list",
+      "code": "def second_largest(numbers):\n    return sorted(set(numbers))[-2]\n\n# Example Usage:\nsecond_max = second_largest([1, 3, 4, 5, 0, 5])",
+      "tags": [
+        "python",
+        "second largest",
+        "list"
+      ]
+    },
+    {
+      "description": "Generate a list of even numbers up to n",
+      "code": "def generate_evens(n):\n    return [x for x in range(n) if x % 2 == 0]\n\n# Example Usage:\nevens = generate_evens(10)",
+      "tags": [
+        "python",
+        "even numbers",
+        "list"
+      ]
+    },
+    {
+      "description": "Find the sum of elements in a list",
+      "code": "def sum_of_list(lst):\n    return sum(lst)\n\n# Example Usage:\nlist_sum = sum_of_list([1, 2, 3, 4, 5])",
+      "tags": [
+        "python",
+        "sum",
+        "list"
+      ]
+    },
+    {
+      "description": "Check if a string contains only digits",
+      "code": "def is_digit_only(s):\n    return s.isdigit()\n\n# Example Usage:\ndigit_only = is_digit_only('12345')",
+      "tags": [
+        "python",
+        "string",
+        "digits"
+      ]
+    },
+    {
+      "description": "Rotate a list to the left by k elements",
+      "code": "def rotate_list(lst, k):\n    return lst[k:] + lst[:k]\n\n# Example Usage:\nrotated_list = rotate_list([1, 2, 3, 4, 5], 2)",
+      "tags": [
+        "python",
+        "rotate",
+        "list"
+      ]
+    },
+    {
+      "description": "Convert a list of characters into a string",
+      "code": "def chars_to_string(char_list):\n    return ''.join(char_list)\n\n# Example Usage:\nstring = chars_to_string(['p', 'y', 't', 'h', 'o', 'n'])",
+      "tags": [
+        "python",
+        "list",
+        "string",
+        "conversion"
+      ]
+    },
+    {
+      "description": "Create a dictionary from two lists",
+      "code": "def create_dict(keys, values):\n    return dict(zip(keys, values))\n\n# Example Usage:\nmy_dict = create_dict(['a', 'b', 'c'], [1, 2, 3])",
+      "tags": [
+        "python",
+        "dictionary",
+        "zip"
+      ]
+    },
+    {
+      "description": "Find unique elements in a list",
+      "code": "def unique_elements(lst):\n    return list(set(lst))\n\n# Example Usage:\nunique = unique_elements([1, 2, 2, 3, 4, 4])",
+      "tags": [
+        "python",
+        "unique",
+        "list",
+        "set"
+      ]
+    },
+    {
+      "description": "Implement a function to check if a list is sorted",
+      "code": "def is_sorted(lst):\n    return lst == sorted(lst)\n\n# Example Usage:\nis_list_sorted = is_sorted([1, 2, 3, 4, 5])",
+      "tags": [
+        "python",
+        "sorted",
+        "check",
+        "list"
+      ]
+    },
+    {
+      "description": "Calculate the power of a number using exponentiation",
+      "code": "def power(base, exponent):\n    return base ** exponent\n\n# Example Usage:\nresult = power(2, 3)",
+      "tags": [
+        "python",
+        "power",
+        "math",
+        "exponentiation"
+      ]
+    },
+    {
+      "description": "Sieve of Eratosthenes for finding all prime numbers up to a given limit",
+      "code": "def sieve_of_eratosthenes(limit):\n    primes = [True for i in range(limit + 1)]\n    p = 2\n    while (p * p <= limit):\n        if (primes[p] == True):\n            for i in range(p * p, limit + 1, p):\n                primes[i] = False\n        p += 1\n    prime_numbers = [p for p in range(2, limit) if primes[p]]\n    return prime_numbers\n\n# Example Usage:\nprimes_up_to_50 = sieve_of_eratosthenes(50)",
+      "tags": [
+        "python",
+        "prime numbers",
+        "sieve of eratosthenes",
+        "algorithm"
+      ]
+    }
+  ]
+}
